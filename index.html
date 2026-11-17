@@ -4,35 +4,74 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Usmania Stationers & Opticals</title>
-<meta name="description" content="Stationery, gifts, toys, books, glasses and lenses at Usmania Stationers & Opticals.">
+<meta name="description" content="Stationery, gifts, toys, books, glasses and lenses at Usmania Stationers & Opticals. Browse and inquire on WhatsApp.">
 <meta name="theme-color" content="#0b2545">
+<meta property="og:title" content="Usmania Stationers & Opticals">
+<meta property="og:description" content="Stationery, gifts, toys, books, glasses and lenses in one shop.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%230b2545'/%3E%3Ctext x='50' y='68' font-size='58' text-anchor='middle' fill='%23ffd23f' font-family='Arial' font-weight='700'%3EU%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Store","name":"Usmania Stationers & Opticals","telephone":"+923349898919","openingHours":"Mo-Su 09:00-21:00","description":"Stationery, gifts, toys, books, glasses and lenses."}
+</script>
 <style>
-:root{--navy:#0b2545;--teal:#0fb5a8;--sun:#ffd23f;--soft:#f2f6fb;--ink:#0b2545;--mut:#566179;--line:#dce4ef;--r:20px}
+/* =====================================================
+   1. BASE / TOKENS
+===================================================== */
+:root{--navy:#0b2545;--navy2:#143a6b;--teal:#0fb5a8;--sun:#ffd23f;--soft:#f2f6fb;--ink:#0b2545;--mut:#566179;--line:#dce4ef;--ok:#0a7d5a;--bad:#b42318;--r:20px}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:84px}
-body{font-family:Manrope,system-ui,sans-serif;color:var(--ink);line-height:1.65}
+body{font-family:Manrope,system-ui,sans-serif;color:var(--ink);line-height:1.65;background:#fff}
 h1,h2,h3{font-family:Sora,sans-serif;line-height:1.12;letter-spacing:-.02em}
 a{color:inherit;text-decoration:none}
 button,input,select,textarea{font:inherit;color:inherit}
 button{cursor:pointer}
 img{max-width:100%;display:block}
+[hidden]{display:none!important}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
 .wrap{max-width:1180px;margin:auto;padding:0 22px}
-header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid var(--line)}
+section{padding:82px 0}
+.k{font-weight:700;color:var(--teal);font-size:.95rem;margin-bottom:10px}
+h2{font-size:clamp(1.9rem,3.6vw,2.8rem);margin-bottom:14px}
+.sub{color:var(--mut);max-width:56ch;margin-bottom:30px}
+.soft{background:var(--soft)}
+.note{font-size:.85rem;color:var(--mut)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:0;background:var(--navy);color:#fff;border-radius:14px;padding:13px 22px;font-weight:700;transition:.15s}
+.btn:hover{transform:translateY(-2px);background:var(--navy2)}
+.btn:disabled{opacity:.6;cursor:wait;transform:none}
+.btn.y{background:var(--sun);color:var(--navy)}
+.btn.o{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn.g{background:#25d366;color:#fff}
+.btn.sm{padding:9px 15px;font-size:.88rem;border-radius:12px}
+.btn.danger{background:var(--bad)}
+
+/* forms */
+form{background:#fff;border-radius:var(--r);padding:26px;display:grid;gap:14px;border:1px solid var(--line);color:var(--ink)}
+label{display:grid;gap:6px;font-weight:700;font-size:.9rem}
+input,select,textarea{width:100%;background:#fff;border:2px solid var(--line);border-radius:12px;padding:12px 14px}
+input:focus,select:focus,textarea:focus{border-color:var(--teal);outline:0}
+textarea{resize:vertical}
+
+/* =====================================================
+   2. HEADER
+===================================================== */
+header.site{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid var(--line)}
 .bar{height:72px;display:flex;align-items:center;gap:22px}
 .logo{display:flex;align-items:center;gap:10px;font-family:Sora;font-weight:800}
 .logo small{display:block;font-family:Manrope;font-size:.72rem;color:var(--mut);font-weight:500}
 .mark{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--navy),var(--teal));color:var(--sun);display:grid;place-items:center;font-size:1.4rem}
 nav{margin-left:auto;display:flex;gap:20px;font-weight:700;font-size:.9rem}
 nav a{color:var(--mut)}
-.btn{display:inline-flex;align-items:center;justify-content:center;border:0;background:var(--navy);color:#fff;border-radius:14px;padding:13px 22px;font-weight:700;transition:.15s}
-.btn:hover{transform:translateY(-2px);background:#143a6b}
-.btn.y{background:var(--sun);color:var(--navy)}
-.btn.o{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
-.btn.sm{padding:9px 15px;font-size:.88rem;border-radius:12px}
-.btn.danger{background:#b42318}
+nav a:hover{color:var(--teal)}
 .burger{display:none;margin-left:auto;background:#fff;border:2px solid var(--line);border-radius:12px;width:44px;height:44px}
+
+/* =====================================================
+   3. HERO
+===================================================== */
 .hero{background:var(--navy);color:#fff;padding:64px 0 0;overflow:hidden}
 .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:end}
 .hero .txt{padding-bottom:64px}
@@ -46,10 +85,10 @@ nav a{color:var(--mut)}
 .hero-gallery img{width:100%;height:100%;object-fit:cover;border-radius:var(--r)}
 .hero-gallery img:nth-child(2){grid-row:span 2}
 .hero-gallery img:nth-child(4){grid-column:span 2}
-section{padding:82px 0}
-.k{font-weight:700;color:var(--teal);font-size:.95rem;margin-bottom:10px}
-h2{font-size:clamp(1.9rem,3.6vw,2.8rem);margin-bottom:14px}
-.sub{color:var(--mut);max-width:56ch;margin-bottom:30px}
+
+/* =====================================================
+   4. CATEGORIES + PRODUCTS
+===================================================== */
 .rows{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
 .crow{min-width:0;overflow:hidden;display:flex;flex-direction:column;gap:12px;padding:12px;border:1px solid var(--line);border-radius:18px;background:#fff;text-align:left;transition:.2s}
 .crow:hover{transform:translateY(-4px);box-shadow:0 12px 28px #0b254515;border-color:var(--teal)}
@@ -59,33 +98,39 @@ h2{font-size:clamp(1.9rem,3.6vw,2.8rem);margin-bottom:14px}
 .crow h3{font-size:1.05rem}
 .crow p{color:var(--mut);font-size:.8rem;line-height:1.5}
 .crow .arrow{margin-top:auto;color:var(--teal);font-weight:800}
-.soft{background:var(--soft)}
-.search{width:100%;margin-bottom:18px;padding:14px 20px;border:2px solid var(--line);border-radius:14px}
-.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+
+.tools{display:grid;grid-template-columns:1fr 190px;gap:12px;margin-bottom:16px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.chips.subs .chip{padding:6px 13px;font-size:.85rem;border-radius:999px}
 .chip{border:2px solid var(--line);background:#fff;border-radius:12px;padding:9px 16px;font-weight:700}
 .chip[aria-pressed=true]{background:var(--navy);border-color:var(--navy);color:#fff}
+.count{color:var(--mut);font-size:.9rem;margin:6px 0 18px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px}
-.pc{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.pc{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;min-width:0;transition:.2s}
+.pc:hover{box-shadow:0 12px 28px #0b254515;transform:translateY(-3px)}
 .pic{height:190px;background:#edf2f7;overflow:hidden}
-.pic img{width:100%;height:100%;object-fit:contain}
+.pic img{width:100%;height:100%;object-fit:cover}
 .pin{padding:18px;display:flex;flex-direction:column;gap:5px;flex:1}
 .pin small{color:var(--mut)}
 .pin h3{font-size:1.08rem}
 .pin .btn{margin-top:auto}
 .price-line{font-weight:800;margin:5px 0 10px}
+.price-line.ask{color:var(--teal)}
 .empty{grid-column:1/-1;text-align:center;padding:40px;color:var(--mut)}
+.skel{height:300px;border-radius:var(--r);background:linear-gradient(90deg,#edf2f7,#f8fafc,#edf2f7);background-size:200% 100%;animation:sk 1.2s infinite}
+@keyframes sk{to{background-position:-200% 0}}
+
+/* =====================================================
+   5. OPTICALS / WHY / HOW / FAQ / CONTACT
+===================================================== */
 .opt{background:var(--teal);color:var(--navy)}
 .og{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
 .opt .sub{color:#0a3c46}
+.opt .k{color:var(--navy)}
 .ol{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .ol li{background:#fffffff0;border-radius:16px;padding:18px}
 .ol b{display:block;font-family:Sora;margin-bottom:4px}
 .ol p{font-size:.92rem;color:var(--mut)}
-form{background:#fff;border-radius:var(--r);padding:26px;display:grid;gap:14px;border:1px solid var(--line);color:var(--ink)}
-label{display:grid;gap:6px;font-weight:700;font-size:.9rem}
-input,select,textarea{width:100%;background:#fff;border:2px solid var(--line);border-radius:12px;padding:12px 14px}
-textarea{resize:vertical}
-.note{font-size:.85rem;color:var(--mut)}
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
 .st,.wb{background:var(--soft);border-radius:var(--r);padding:26px}
 .st i{font-style:normal;width:40px;height:40px;border-radius:12px;background:var(--sun);display:grid;place-items:center;font-weight:800;margin-bottom:14px}
@@ -93,48 +138,112 @@ textarea{resize:vertical}
 .why{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
 .wb{border:1px solid var(--line)}
 .wb h3{margin:10px 0 6px;font-size:1.2rem}
-details{border-bottom:1px solid var(--line);padding:18px 0}
-summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between}
-summary:after{content:"+";font-size:1.5rem;color:var(--teal)}
-details[open] summary:after{content:"–"}
-details p{color:var(--mut);margin-top:10px}
+details.faq{border-bottom:1px solid var(--line);padding:18px 0}
+details.faq summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between}
+details.faq summary:after{content:"+";font-size:1.5rem;color:var(--teal)}
+details.faq[open] summary:after{content:"–"}
+details.faq p{color:var(--mut);margin-top:10px}
 .ct{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:start}
 .info{display:grid;gap:12px}
 .info div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 18px}
 .info small{display:block;color:var(--mut)}
-footer{background:var(--navy);color:#bccbe3;padding:34px 0}
-footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-footer b{color:#fff;font-family:Sora}
-.fl{position:fixed;right:18px;bottom:18px;z-index:35}
+
+footer.site{background:var(--navy);color:#bccbe3;padding:34px 0}
+footer.site .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer.site b{color:#fff;font-family:Sora}
+.admin-link{font-size:.8rem;color:#aab9d0}
+
+/* floating buttons */
+.fl{position:fixed;right:18px;bottom:18px;z-index:35;display:grid;gap:10px;justify-items:end}
 .fl a{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:#25d366;color:#fff;font-weight:800;font-size:.7rem;box-shadow:0 8px 20px #0004}
+.fb{position:fixed;left:18px;bottom:18px;z-index:35;background:var(--navy);color:#fff;border:0;border-radius:999px;padding:13px 20px;font-weight:700;box-shadow:0 8px 20px #0004}
+.fb b{background:var(--sun);color:var(--navy);border-radius:999px;padding:2px 9px;margin-left:6px}
+
+/* modals */
 .modal{position:fixed;inset:0;background:#071428aa;display:none;place-items:center;z-index:60;padding:16px}
 .modal.open{display:grid}
-.modal form{width:min(470px,100%);max-height:92vh;overflow:auto}
+.modal form{width:min(480px,100%);max-height:92vh;overflow:auto}
 .x{justify-self:end;background:none;border:0;font-size:1.5rem}
-.admin{display:none;background:#eef3f8;padding:35px 0;min-height:80vh}
-.admin.show{display:block}
-.admin-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;margin:16px 0}
-.admin-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-.admin-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:12px 0}
-.admin-grid form,.admin-card form{border:0;padding:0}
-.admin table{width:100%;border-collapse:collapse;min-width:650px}
-.admin th,.admin td{text-align:left;padding:10px;border-bottom:1px solid var(--line);font-size:.88rem}
-.table-wrap{overflow:auto}
-.admin-status{padding:12px;border-radius:10px;background:#e7f7f3;margin:12px 0}
-.admin-link{font-size:.8rem;color:#aab9d0}
-.cf img{height:80px;width:auto;border-radius:8px;object-fit:cover;background:#eee}
-.cgroup{margin:18px 0 6px;text-transform:uppercase;font-size:.8rem;color:var(--teal);font-weight:800}
+.pm-img{height:170px;border-radius:14px;overflow:hidden;background:#edf2f7}
+.pm-img img{width:100%;height:100%;object-fit:cover}
+.pm-btns{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.bl{display:grid;gap:8px}
+.bl-i{display:flex;align-items:center;gap:10px;background:var(--soft);border-radius:12px;padding:10px 12px}
+.bl-i div{flex:1;min-width:0}
+.bl-i small{color:var(--mut);display:block}
+.bl-i input{width:68px;padding:8px}
+
+/* toast */
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:var(--navy);color:#fff;padding:12px 20px;border-radius:12px;z-index:200;opacity:0;transition:.25s;pointer-events:none;max-width:90vw;font-weight:700;font-size:.9rem}
+.toast.show{opacity:1;transform:translateX(-50%)}
+.toast.err{background:var(--bad)}
+
+/* =====================================================
+   6. ADMIN PANEL
+===================================================== */
+.adm{position:fixed;inset:0;z-index:100;background:#eef3f8;display:grid;grid-template-columns:230px 1fr;overflow:hidden}
+.adm[hidden]{display:none}
+.adm-side{background:var(--navy);color:#fff;padding:22px 14px;display:flex;flex-direction:column;gap:6px;overflow:auto}
+.adm-side .logo{padding:0 8px 18px;color:#fff}
+.adm-side button{background:none;border:0;color:#bccbe3;text-align:left;padding:12px 14px;border-radius:12px;font-weight:700;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.adm-side button:hover{background:#ffffff14;color:#fff}
+.adm-side button[aria-current=true]{background:var(--teal);color:var(--navy)}
+.adm-side .sp{flex:1}
+.badge{background:var(--sun);color:var(--navy);border-radius:999px;padding:1px 9px;font-size:.78rem}
+.adm-main{overflow:auto;padding:26px 30px 80px}
+.adm-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.adm-top h2{margin:0;font-size:1.7rem}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:16px}
+.card h3{font-size:1.1rem;margin-bottom:12px}
+.card-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.card-head h3{margin:0}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin-bottom:16px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}
+.stat b{display:block;font-family:Sora;font-size:2rem;line-height:1.1}
+.stat span{color:var(--mut);font-size:.88rem}
+.stat.hot{background:var(--sun);border-color:var(--sun)}
+.agrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.adm form{border:0;padding:0}
+.tbl{overflow:auto}
+.adm table{width:100%;border-collapse:collapse;min-width:680px}
+.adm th,.adm td{text-align:left;padding:10px;border-bottom:1px solid var(--line);font-size:.88rem;vertical-align:top}
+.adm th{color:var(--mut);font-size:.78rem;text-transform:uppercase;letter-spacing:.04em}
+.adm td .btn{margin:0 4px 4px 0}
+.tag{display:inline-block;border-radius:999px;padding:2px 10px;font-size:.78rem;font-weight:700}
+.tag.on{background:#e7f7f3;color:var(--ok)}
+.tag.off{background:#eee;color:var(--mut)}
+.thumb{width:46px;height:46px;object-fit:cover;border-radius:8px;background:#eee}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.filters input{max-width:280px}
+.filters select{max-width:180px}
+details.grp{background:#fff;border:1px solid var(--line);border-radius:16px;margin-bottom:12px}
+details.grp>summary{cursor:pointer;font-weight:800;padding:16px 20px;font-family:Sora}
+details.grp>div{padding:0 20px 20px}
+.cf img{height:80px;width:auto;border-radius:8px;object-fit:cover;background:#eee;margin:4px 0}
+.cf small,.kk{font-weight:500;color:var(--mut);font-size:.75rem}
+.savebar{position:sticky;top:-26px;z-index:5;background:#eef3f8;padding:10px 0;display:flex;justify-content:flex-end;gap:10px}
+.pform-prev{max-height:90px;border-radius:10px;margin-top:6px}
+
+/* =====================================================
+   7. RESPONSIVE
+===================================================== */
 @media(max-width:1000px){.rows{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:860px){
 .hero .wrap,.og,.ct{grid-template-columns:1fr}
 .hero .txt{padding-bottom:20px}
 .hero-gallery{grid-template-rows:120px 120px 90px}
-nav{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;flex-direction:column;padding:18px 22px}
+nav{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;flex-direction:column;padding:18px 22px;border-bottom:1px solid var(--line)}
 nav.show{display:flex}
 .burger{display:block}
 .hm{display:none}
 section{padding:58px 0}
 .ol{grid-template-columns:1fr}
+.adm{grid-template-columns:1fr;grid-template-rows:auto 1fr}
+.adm-side{flex-direction:row;overflow-x:auto;padding:10px;align-items:center}
+.adm-side .logo,.adm-side .sp{display:none}
+.adm-side button{white-space:nowrap}
+.adm-main{padding:18px 14px 80px}
+.savebar{top:-18px}
 }
 @media(max-width:560px){
 .rows{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
@@ -144,11 +253,19 @@ section{padding:58px 0}
 .crow p{font-size:.75rem}
 .pic{height:155px}
 .hero-gallery{gap:8px}
+.tools{grid-template-columns:1fr}
+.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.pin{padding:12px}
+.pin h3{font-size:.95rem}
 }
 </style>
 </head>
 <body id="top">
-<header><div class="wrap bar">
+
+<!-- =====================================================
+     PUBLIC WEBSITE
+===================================================== -->
+<header class="site"><div class="wrap bar">
 <a class="logo" href="#top"><span class="mark">U</span><span><span data-t="brand_name">Usmania</span><small data-t="brand_sub">Stationers & Opticals</small></span></a>
 <nav id="nav">
 <a href="#categories">Categories</a><a href="#products">Products</a><a href="#opticals">Opticals</a><a href="#how">How to order</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
@@ -187,8 +304,13 @@ section{padding:58px 0}
 <p class="k" data-t="prod_k">Our products</p>
 <h2 data-t="prod_h">Find it, then ask us</h2>
 <p class="sub" data-t="prod_sub">Choose a product, select its type and quantity, then ask us for availability and rate.</p>
-<input class="search" id="q" type="search" placeholder="Search products..." aria-label="Search products">
+<div class="tools">
+<input id="q" type="search" placeholder="Search products..." aria-label="Search products">
+<select id="sort" aria-label="Sort products"><option value="new">Newest first</option><option value="az">Name A to Z</option><option value="za">Name Z to A</option></select>
+</div>
 <div class="chips" id="chips"></div>
+<div class="chips subs" id="subchips"></div>
+<p class="count" id="count"></p>
 <div class="grid" id="grid"></div>
 </div></section>
 
@@ -209,11 +331,11 @@ section{padding:58px 0}
 <label>What do you need?
 <select name="need"><option>Prescription glasses</option><option>Men's frames</option><option>Women's frames</option><option>Kids frames</option><option>Sunglasses</option><option>Prescription lenses</option><option>Blue-cut lenses</option><option>Eye test</option><option>Frame repair</option></select>
 </label>
-<label>Your name<input name="name" required></label>
-<label>Phone number<input name="phone" type="tel" required></label>
+<label>Your name<input name="name" required autocomplete="name"></label>
+<label>Phone number<input name="phone" type="tel" required autocomplete="tel"></label>
 <label>Eye number / prescription<textarea name="prescription" rows="3"></textarea></label>
-<label>Upload prescription<input type="file" accept="image/*,.pdf"></label>
-<p class="note">Prescription files are uploaded to the private Supabase bucket. You may also attach the file manually in WhatsApp.</p>
+<label>Upload prescription (optional)<input type="file" name="file" accept="image/*,.pdf"></label>
+<p class="note">Your prescription is stored privately. You may also attach it manually in WhatsApp.</p>
 <label>Message<textarea name="msg" rows="3"></textarea></label>
 <button class="btn" type="submit">Continue on WhatsApp</button>
 </form>
@@ -243,11 +365,11 @@ section{padding:58px 0}
 <section id="faq"><div class="wrap" style="max-width:820px">
 <p class="k" data-t="faq_k">FAQ</p>
 <h2 data-t="faq_h">Common questions</h2>
-<details><summary data-t="faq_1q">Can I buy online?</summary><p data-t="faq_1a">This website is for browsing and inquiries. Orders and payments are agreed on WhatsApp.</p></details>
-<details><summary data-t="faq_2q">How do I know the price?</summary><p data-t="faq_2a">Send an inquiry and we will reply with the current rate.</p></details>
-<details><summary data-t="faq_3q">Do you offer delivery?</summary><p data-t="faq_3a">Please ask us on WhatsApp about delivery.</p></details>
-<details><summary data-t="faq_4q">Do you do eye tests?</summary><p data-t="faq_4a">Contact the shop to confirm availability.</p></details>
-<details><summary data-t="faq_5q">Do you take bulk orders?</summary><p data-t="faq_5a">Yes, message us with the items and quantities.</p></details>
+<details class="faq"><summary data-t="faq_1q">Can I buy online?</summary><p data-t="faq_1a">This website is for browsing and inquiries. Orders and payments are agreed on WhatsApp.</p></details>
+<details class="faq"><summary data-t="faq_2q">How do I know the price?</summary><p data-t="faq_2a">Send an inquiry and we will reply with the current rate.</p></details>
+<details class="faq"><summary data-t="faq_3q">Do you offer delivery?</summary><p data-t="faq_3a">Please ask us on WhatsApp about delivery.</p></details>
+<details class="faq"><summary data-t="faq_4q">Do you do eye tests?</summary><p data-t="faq_4a">Contact the shop to confirm availability.</p></details>
+<details class="faq"><summary data-t="faq_5q">Do you take bulk orders?</summary><p data-t="faq_5a">Yes, message us with the items and quantities.</p></details>
 </div></section>
 
 <section id="contact" class="soft"><div class="wrap ct">
@@ -262,103 +384,168 @@ section{padding:58px 0}
 </div>
 </div>
 <form id="generalForm">
-<label>Your name<input name="name" required></label>
-<label>Phone number<input name="phone" type="tel" required></label>
+<label>Your name<input name="name" required autocomplete="name"></label>
+<label>Phone number<input name="phone" type="tel" required autocomplete="tel"></label>
 <label>Category<select name="cat" id="generalCategory"></select></label>
 <label>Your message<textarea name="msg" rows="4" required></textarea></label>
 <button class="btn" type="submit">Send on WhatsApp</button>
-<p class="note">Your inquiry is saved to the shop database.</p>
+<p class="note">Your inquiry is saved so the shop can follow up.</p>
 </form>
 </div></section>
 </main>
 
-<section class="admin" id="adminPanel"><div class="wrap">
-<div class="admin-head">
-<div><p class="k">Private area</p><h2>Shop Admin Panel</h2></div>
-<button class="btn sm danger" id="logout">Log out</button>
-</div>
-<div class="admin-status" id="adminStatus">Admin panel</div>
-
-<div class="admin-card">
-<div class="admin-head"><h3>Website content (all texts & images)</h3><button class="btn sm" id="saveContent">Save all changes</button></div>
-<p class="note">Har text change karein, image ke liye nai file select karein ya URL paste karein, phir "Save all changes" dabayein.</p>
-<div id="contentEditor"></div>
-<button class="btn" id="saveContent2" style="margin-top:16px">Save all changes</button>
-</div>
-
-<div class="admin-card">
-<h3 id="productFormTitle">Add product</h3>
-<form id="adminProductForm">
-<input type="hidden" id="editId">
-<div class="admin-grid">
-<label>Product name<input id="pName" required></label>
-<label>Category<select id="pCategory"></select></label>
-<label>Price<input id="pPrice" value="0000"></label>
-<label>Product image<input id="pImage" type="file" accept="image/*"></label>
-</div>
-<label>Description<textarea id="pDescription" rows="2"></textarea></label>
-<label>Options, one per line<textarea id="pOptions" rows="3" placeholder="Blue Pen&#10;Black Pen"></textarea></label>
-<label><span><input type="checkbox" id="pActive" checked style="width:auto"> Active / visible</span></label>
-<div style="display:flex;gap:8px;flex-wrap:wrap">
-<button class="btn sm" type="submit">Save product</button>
-<button class="btn sm o" type="button" id="clearProduct">Clear</button>
-</div>
-</form>
-</div>
-
-<div class="admin-card">
-<div class="admin-head"><h3>Products</h3><button class="btn sm" id="refreshProducts">Refresh</button></div>
-<div class="table-wrap"><table>
-<thead><tr><th>Image</th><th>Name</th><th>Category</th><th>Price</th><th>Status</th><th>Actions</th></tr></thead>
-<tbody id="adminProducts"></tbody>
-</table></div>
-</div>
-
-<div class="admin-card">
-<div class="admin-head"><h3>Customer inquiries</h3><button class="btn sm" id="refreshInquiries">Refresh</button></div>
-<div class="table-wrap"><table>
-<thead><tr><th>Date</th><th>Type</th><th>Customer</th><th>Phone</th><th>Details</th><th>Prescription</th><th>Status</th></tr></thead>
-<tbody id="adminInquiries"></tbody>
-</table></div>
-</div>
-</div></section>
-
-<footer><div class="wrap">
+<footer class="site"><div class="wrap">
 <b data-t="foot_name">Usmania Stationers & Opticals</b>
 <span>© <span id="yr"></span> All rights reserved. · <a class="admin-link" href="#admin" id="adminOpen">Admin</a></span>
 </div></footer>
 
-<div class="fl"><a id="wa" href="#">WhatsApp</a></div>
+<div class="fl"><a id="wa" href="#" aria-label="Chat on WhatsApp">WhatsApp</a></div>
+<button class="fb" id="basketBtn" hidden>📝 My inquiry list <b id="basketCount">0</b></button>
+<div class="toast" id="toast" role="status"></div>
 
-<div class="modal" id="modal" role="dialog" aria-modal="true">
+<!-- product inquiry modal -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
 <form id="productInquiryForm">
-<button type="button" class="x" id="closeModal">✕</button>
+<button type="button" class="x" id="closeModal" aria-label="Close">✕</button>
+<div class="pm-img"><img id="modalImg" alt=""></div>
 <h3 id="modalTitle">Product inquiry</h3>
 <input type="hidden" name="product" id="modalProduct">
-<label>Your name<input name="name" required></label>
-<label>Phone number<input name="phone" type="tel" required></label>
 <label>Choose option<select name="option" id="productOption"></select></label>
 <p class="price-line" id="productPrice"></p>
 <label>Quantity<input name="qty" type="number" min="1" value="1" required></label>
-<label>Message<textarea name="msg" rows="3"></textarea></label>
-<button class="btn" type="submit">Send on WhatsApp</button>
+<label>Your name<input name="name" required autocomplete="name"></label>
+<label>Phone number<input name="phone" type="tel" required autocomplete="tel"></label>
+<label>Message<textarea name="msg" rows="2"></textarea></label>
+<div class="pm-btns">
+<button class="btn o" type="button" id="addToList">+ Add to list</button>
+<button class="btn g" type="submit">Send on WhatsApp</button>
+</div>
 </form>
 </div>
 
+<!-- basket modal -->
+<div class="modal" id="basketModal" role="dialog" aria-modal="true">
+<form id="basketForm">
+<button type="button" class="x" id="closeBasket" aria-label="Close">✕</button>
+<h3>My inquiry list</h3>
+<div class="bl" id="basketList"></div>
+<label>Your name<input name="name" required autocomplete="name"></label>
+<label>Phone number<input name="phone" type="tel" required autocomplete="tel"></label>
+<label>Message<textarea name="msg" rows="2"></textarea></label>
+<button class="btn g" type="submit">Send whole list on WhatsApp</button>
+<button class="btn o" type="button" id="clearBasket">Clear list</button>
+</form>
+</div>
+
+<!-- admin login modal -->
 <div class="modal" id="loginModal" role="dialog" aria-modal="true">
 <form id="loginForm">
-<button type="button" class="x" id="closeLogin">✕</button>
+<button type="button" class="x" id="closeLogin" aria-label="Close">✕</button>
 <h3>Admin login</h3>
 <p class="note">Use your Supabase Auth admin email and password.</p>
-<label>Email<input type="email" id="loginEmail" required></label>
-<label>Password<input type="password" id="loginPassword" required></label>
+<label>Email<input type="email" id="loginEmail" required autocomplete="username"></label>
+<label>Password<input type="password" id="loginPassword" required autocomplete="current-password"></label>
 <button class="btn" type="submit">Sign in</button>
 <p id="loginError" class="note"></p>
 </form>
 </div>
 
+<!-- =====================================================
+     ADMIN PANEL (full screen, tab based)
+===================================================== -->
+<div class="adm" id="adm" hidden>
+<aside class="adm-side">
+<a class="logo" href="#top"><span class="mark">U</span><span>Admin<small style="color:#aab9d0">Shop control</small></span></a>
+<button data-tab="dash" aria-current="true">📊 Dashboard</button>
+<button data-tab="products">📦 Products</button>
+<button data-tab="inquiries">💬 Inquiries <span class="badge" id="newBadge" hidden>0</span></button>
+<button data-tab="content">✏️ Website content</button>
+<span class="sp"></span>
+<button id="viewSite">🌐 View website</button>
+<button id="logout">🚪 Log out</button>
+</aside>
+
+<div class="adm-main">
+<div class="adm-top"><h2 id="admTitle">Dashboard</h2><span class="note">Har change save karne ke baad website par foran nazar aata hai.</span></div>
+
+<!-- TAB: Dashboard -->
+<div class="tab" id="tab-dash">
+<div class="stats" id="stats"></div>
+<div class="card"><div class="card-head"><h3>Latest inquiries</h3><button class="btn sm" data-go="inquiries">See all</button></div>
+<div class="tbl"><table><thead><tr><th>Date</th><th>Customer</th><th>Product</th><th>Status</th></tr></thead><tbody id="dashInq"></tbody></table></div></div>
+<div class="card"><h3>Quick actions</h3>
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+<button class="btn sm" data-go="products" data-new="1">+ Add product</button>
+<button class="btn sm" data-go="content">Edit website text / images</button>
+<button class="btn sm o" id="viewSite2">View website</button>
+</div></div>
+</div>
+
+<!-- TAB: Products -->
+<div class="tab" id="tab-products" hidden>
+<details class="card" id="pFormBox">
+<summary style="cursor:pointer;font-weight:800" id="productFormTitle">+ Add new product</summary>
+<form id="adminProductForm" style="margin-top:16px">
+<input type="hidden" id="editId">
+<div class="agrid">
+<label>Product name<input id="pName" required></label>
+<label>Category<select id="pCategory"></select></label>
+<label>Price (PKR)<input id="pPrice" value="0000"></label>
+<label>Product image<input id="pImage" type="file" accept="image/*"><img id="pPrev" class="pform-prev" hidden alt=""></label>
+</div>
+<label>Description<textarea id="pDescription" rows="2"></textarea></label>
+<label>Options, one per line <span class="kk">Optional price: "Blue Pen | 50"</span><textarea id="pOptions" rows="4" placeholder="Blue Pen | 50&#10;Black Pen | 50"></textarea></label>
+<label><span><input type="checkbox" id="pActive" checked style="width:auto"> Active / visible on website</span></label>
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+<button class="btn sm" type="submit" id="pSave">Save product</button>
+<button class="btn sm o" type="button" id="clearProduct">Clear</button>
+</div>
+</form>
+</details>
+
+<div class="card">
+<div class="card-head"><h3>All products <span class="note" id="pCount"></span></h3><button class="btn sm" id="refreshProducts">Refresh</button></div>
+<div class="filters">
+<input id="apq" type="search" placeholder="Search product...">
+<select id="apc"><option value="">All categories</option></select>
+<select id="aps"><option value="">All status</option><option value="1">Active</option><option value="0">Hidden</option></select>
+</div>
+<div class="tbl"><table>
+<thead><tr><th>Image</th><th>Name</th><th>Category</th><th>Price</th><th>Status</th><th>Actions</th></tr></thead>
+<tbody id="adminProducts"></tbody>
+</table></div>
+</div>
+</div>
+
+<!-- TAB: Inquiries -->
+<div class="tab" id="tab-inquiries" hidden>
+<div class="card">
+<div class="card-head"><h3>Customer inquiries <span class="note" id="iCount"></span></h3><button class="btn sm" id="refreshInquiries">Refresh</button></div>
+<div class="filters">
+<input id="aiq" type="search" placeholder="Search name, phone, product...">
+<select id="ais"><option value="">All status</option><option value="new">New</option><option value="contacted">Contacted</option><option value="completed">Completed</option></select>
+</div>
+<div class="tbl"><table>
+<thead><tr><th>Date</th><th>Type</th><th>Customer</th><th>Details</th><th>Prescription</th><th>Status</th></tr></thead>
+<tbody id="adminInquiries"></tbody>
+</table></div>
+</div>
+</div>
+
+<!-- TAB: Content -->
+<div class="tab" id="tab-content" hidden>
+<div class="savebar"><button class="btn" id="saveContent">💾 Save all changes</button></div>
+<p class="note" style="margin-bottom:14px">Har text badlein, image ke liye nayi file chunein ya URL paste karein, phir "Save all changes" dabayein. Khali chhorne par original text wapas aa jata hai. WhatsApp number format: 923XXXXXXXXX</p>
+<div id="contentEditor"></div>
+</div>
+</div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
+/* =====================================================
+   A. CONFIG
+===================================================== */
 const SUPABASE_URL="https://vynikbccnekezpasinoo.supabase.co";
 const SUPABASE_ANON_KEY="sb_publishable_E4UjhE5kwh_eeTwkcpoi6w_QmX9lW6z";
 const DEFAULT_WHATSAPP="923349898919";
@@ -380,6 +567,7 @@ const MAIN_CATEGORIES=[
 ];
 const IMAGES={notebook:U("1531346878377-a5be20888e57"),pen:U("1583485088034-697b5bc54ccd"),calculator:U("1587145820266-a5951ee6f620"),geometry:U("1513364776144-60967b0f800f"),office:U("1497366754035-f200968a6e72"),gift:U("1513201099705-a9746e1e201f"),toy:U("1587654780291-39c9404d746b"),teddy:U("1559454403-b8fb88521f11"),car:U("1594787318286-3d835c1d207f"),books:U("1507842217343-583bb7270b66"),story:U("1544947950-fa07a98d237f"),glasses:U("1574258495973-f010dfbb5371"),sunglasses:U("1511499767150-a48a237f0083")};
 
+/* Fallback products (shown until the database loads or if it is empty) */
 const SEED=[
 ["Notebooks","Stationery","notebook","Single Line|Four Line|Square Line|Drawing Notebook|Register"],
 ["Pens","Stationery","pen","Blue Ball Pen|Black Ball Pen|Red Ball Pen|Pointer Pen"],
@@ -414,37 +602,54 @@ const SEED=[
 ["Sunglasses","Glasses & Lenses","sunglasses","Men's Sunglasses|Women's Sunglasses|Kids Sunglasses"],
 ["Prescription & Blue-Cut Lenses","Glasses & Lenses","glasses","Single Vision|Bifocal|Blue Cut|Anti Glare"],
 ["Contact Lenses & Eye Care","Glasses & Lenses","glasses","Contact Lenses|Lens Solution|Frame Repair|Fitting"]
-].map((x,i)=>({id:"seed-"+i,name:x[0],category:x[1],image_url:IMAGES[x[2]],price_text:DEFAULT_PRICE,options:x[3].split("|"),is_active:true}));
+].map((x,i)=>({id:"seed-"+i,name:x[0],category:x[1],image_url:IMAGES[x[2]],price_text:DEFAULT_PRICE,options:x[3].split("|").map(n=>({name:n,price_text:DEFAULT_PRICE})),is_active:true,seed:true}));
 
+/* =====================================================
+   B. HELPERS + STATE
+===================================================== */
 const $=id=>document.getElementById(id);
+const $$=s=>[...document.querySelectorAll(s)];
 const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const db=window.supabase?window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY):null;
+/* Sandbox/preview iframes cannot clone Headers objects, so convert them to plain objects first */
+const safeFetch=(input,init={})=>{
+if(init&&init.headers&&typeof init.headers.entries==="function"&&!Array.isArray(init.headers)){
+init={...init,headers:Object.fromEntries(init.headers.entries())};
+}
+return fetch(input,init);
+};
+const db=window.supabase?window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY,{global:{fetch:safeFetch}}):null;
 
-let products=[...SEED],category="All",isAdmin=false;
-const D={};      // default content (from HTML)
-const C={};      // saved content (from Supabase)
-const IMG=new Set();
+const isAsk=t=>!t||/^0+$/.test(String(t).trim());
+const priceLabel=t=>isAsk(t)?"Price on inquiry":"PKR "+t;
+const optName=o=>typeof o==="string"?o:o.name;
+const optPrice=(o,p)=>(typeof o==="object"&&o.price_text)?o.price_text:p;
+function waNumber(){return (val("shop_whatsapp")||"").replace(/\D/g,"")||DEFAULT_WHATSAPP}
+function normPhone(p){let d=String(p||"").replace(/\D/g,"");if(d.startsWith("0"))d="92"+d.slice(1);else if(d.length===10&&d[0]==="3")d="92"+d;return d}
+function fmtDate(d){return d?new Date(d).toLocaleString("en-GB",{day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"}):""}
+let toastT;
+function toast(m,err=false){const t=$("toast");t.textContent=m;t.className="toast show"+(err?" err":"");clearTimeout(toastT);toastT=setTimeout(()=>t.className="toast",3200)}
+function lsGet(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch(e){return d}}
+function lsSet(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+
+let products=[...SEED],category="All",subCat="All",isAdmin=false;
+const D={},C={},IMG=new Set();
 const val=k=>C[k]||D[k]||"";
 
-function setStatus(m,err=false){
-$("adminStatus").textContent=m;
-$("adminStatus").style.background=err?"#fdeaea":"#e7f7f3";
-$("adminStatus").style.color=err?"#922":"#075e52";
-}
-
-/* ---------- Editable content system ---------- */
+/* =====================================================
+   C. EDITABLE CONTENT SYSTEM (texts + images)
+===================================================== */
 function collectDefaults(){
-document.querySelectorAll("[data-t]").forEach(e=>{if(!(e.dataset.t in D))D[e.dataset.t]=e.textContent.trim()});
-document.querySelectorAll("[data-i]").forEach(e=>{if(!(e.dataset.i in D)){D[e.dataset.i]=e.getAttribute("src");IMG.add(e.dataset.i)}});
+$$("[data-t]").forEach(e=>{if(!(e.dataset.t in D))D[e.dataset.t]=e.textContent.trim()});
+$$("[data-i]").forEach(e=>{if(!(e.dataset.i in D)){D[e.dataset.i]=e.getAttribute("src");IMG.add(e.dataset.i)}});
 D.shop_whatsapp=DEFAULT_WHATSAPP;
 }
 function applyContent(){
-document.querySelectorAll("[data-t]").forEach(e=>e.textContent=val(e.dataset.t));
-document.querySelectorAll("[data-i]").forEach(e=>e.src=val(e.dataset.i));
-const n=val("shop_whatsapp").replace(/\D/g,"")||DEFAULT_WHATSAPP;
+$$("[data-t]").forEach(e=>e.textContent=val(e.dataset.t));
+$$("[data-i]").forEach(e=>e.src=val(e.dataset.i));
+const n=waNumber();
 const link=`https://wa.me/${n}?text=${encodeURIComponent("Hello, I would like to make an inquiry.")}`;
 $("wa").href=link;$("contactWhatsApp").href=link;
-$("shopPhone").textContent=n;$("shopPhone").href="tel:"+n;
+$("shopPhone").textContent="+"+n;$("shopPhone").href="tel:+"+n;
 }
 async function loadContent(){
 if(!db)return;
@@ -453,47 +658,14 @@ if(error){console.error("Content load:",error.message);return}
 (data||[]).forEach(r=>{if(r.value)C[r.key]=r.value});
 applyContent();
 }
-function renderContentEditor(){
-let last="",html="";
-Object.keys(D).forEach(k=>{
-const g=k.split("_")[0];
-if(g!==last){html+=`<div class="cgroup">${esc(g)}</div><div class="admin-grid">`;if(last)html="</div>"+html.slice(0)}
-last=g;
-});
-// build properly grouped markup
-const groups={};
-Object.keys(D).forEach(k=>{(groups[k.split("_")[0]]??=[]).push(k)});
-html=Object.entries(groups).map(([g,keys])=>`<div class="cgroup">${esc(g)}</div><div class="admin-grid">`+keys.map(k=>IMG.has(k)
-?`<div class="cf"><label>${esc(k)}<img src="${esc(val(k))}" alt=""><input data-url="${esc(k)}" value="${esc(val(k))}"><input type="file" accept="image/*" data-file="${esc(k)}"></label></div>`
-:`<label>${esc(k)}<textarea data-txt="${esc(k)}" rows="${val(k).length>70?3:1}">${esc(val(k))}</textarea></label>`
-).join("")+"</div>").join("");
-$("contentEditor").innerHTML=html;
-}
-async function saveContent(){
-if(!isAdmin)return;
-setStatus("Saving...");
-try{
-const rows=[];
-document.querySelectorAll("[data-txt]").forEach(t=>rows.push({key:t.dataset.txt,value:t.value.trim()}));
-for(const u of document.querySelectorAll("[data-url]")){
-const k=u.dataset.url;
-const f=document.querySelector(`[data-file="${k}"]`).files[0];
-rows.push({key:k,value:f?await uploadImage(f,"site/"):u.value.trim()});
-}
-const {error}=await db.from("site_content").upsert(rows,{onConflict:"key"});
-if(error)throw error;
-rows.forEach(r=>{if(r.value)C[r.key]=r.value;else delete C[r.key]});
-applyContent();renderContentEditor();
-setStatus("Saved! Website update ho gayi.");
-}catch(e){setStatus("Save failed: "+e.message,true);console.error(e)}
-}
-$("saveContent").addEventListener("click",saveContent);
-$("saveContent2").addEventListener("click",saveContent);
 
-/* ---------- Public site ---------- */
+/* =====================================================
+   D. PUBLIC SITE: categories, filters, products
+===================================================== */
 function fillCategorySelects(){
 const o=CATEGORIES.map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join("");
 $("generalCategory").innerHTML=o;$("pCategory").innerHTML=o;
+$("apc").innerHTML='<option value="">All categories</option>'+o;
 }
 function renderCategories(){
 $("rows").innerHTML=MAIN_CATEGORIES.map((c,i)=>`
@@ -502,95 +674,168 @@ $("rows").innerHTML=MAIN_CATEGORIES.map((c,i)=>`
 <div><h3 data-t="catname_${i}">${esc(c.name)}</h3><p data-t="catdesc_${i}">${esc(c.description)}</p></div>
 <span class="arrow">Explore products →</span>
 </button>`).join("");
-document.querySelectorAll("[data-category]").forEach(b=>b.addEventListener("click",()=>{
-category=b.dataset.category;renderChips();renderProducts();
+$$("[data-category]").forEach(b=>b.addEventListener("click",()=>{
+category=b.dataset.category;subCat="All";renderChips();renderProducts();
 $("products").scrollIntoView({behavior:"smooth"});
 }));
 }
 function renderChips(){
 $("chips").innerHTML=["All",...MAIN_CATEGORIES.map(x=>x.name)].map(c=>`<button class="chip" type="button" aria-pressed="${category===c}" data-chip="${esc(c)}">${esc(c)}</button>`).join("");
-document.querySelectorAll("[data-chip]").forEach(b=>b.addEventListener("click",()=>{category=b.dataset.chip;renderChips();renderProducts()}));
+$$("[data-chip]").forEach(b=>b.addEventListener("click",()=>{category=b.dataset.chip;subCat="All";renderChips();renderProducts()}));
+const subs=CATEGORY_GROUPS[category]||[];
+$("subchips").innerHTML=subs.length>1?["All",...subs].map(c=>`<button class="chip" type="button" aria-pressed="${subCat===c}" data-sub="${esc(c)}">${esc(c)}</button>`).join(""):"";
+$$("[data-sub]").forEach(b=>b.addEventListener("click",()=>{subCat=b.dataset.sub;renderChips();renderProducts()}));
 }
-function optName(o){return typeof o==="string"?o:o.name}
-function renderProducts(){
+function filteredProducts(){
 const q=$("q").value.trim().toLowerCase();
-const allowed=CATEGORY_GROUPS[category]||[category];
-const list=products.filter(p=>p.is_active!==false&&(category==="All"||allowed.includes(p.category))&&
-`${p.name} ${p.category} ${(p.options||[]).map(optName).join(" ")}`.toLowerCase().includes(q));
+const allowed=subCat!=="All"?[subCat]:(CATEGORY_GROUPS[category]||[category]);
+let list=products.filter(p=>p.is_active!==false&&(category==="All"||allowed.includes(p.category))&&
+`${p.name} ${p.category} ${p.description||""} ${(p.options||[]).map(optName).join(" ")}`.toLowerCase().includes(q));
+const s=$("sort").value;
+if(s==="az")list.sort((a,b)=>a.name.localeCompare(b.name));
+if(s==="za")list.sort((a,b)=>b.name.localeCompare(a.name));
+return list;
+}
+function renderProducts(){
+const list=filteredProducts();
+$("count").textContent=list.length+(list.length===1?" product":" products");
 $("grid").innerHTML=list.length?list.map(p=>`
 <article class="pc">
 <div class="pic"><img src="${esc(p.image_url||IMAGES.notebook)}" alt="${esc(p.name)}" loading="lazy"></div>
 <div class="pin"><small>${esc(p.category)}</small><h3>${esc(p.name)}</h3>
-<p class="price-line">PKR ${esc(p.price_text||DEFAULT_PRICE)}</p>
+<p class="price-line ${isAsk(p.price_text)?"ask":""}">${esc(priceLabel(p.price_text))}</p>
 <button class="btn sm" type="button" data-product="${esc(p.id)}">Ask about this</button></div>
-</article>`).join(""):`<p class="empty">No product found. Try another search.</p>`;
-document.querySelectorAll("[data-product]").forEach(b=>b.addEventListener("click",()=>openProduct(b.dataset.product)));
+</article>`).join(""):`<p class="empty">No product found. Try another search or category.</p>`;
+$$("[data-product]").forEach(b=>b.addEventListener("click",()=>openProduct(b.dataset.product)));
 }
+function showSkeleton(){$("grid").innerHTML='<div class="skel"></div>'.repeat(4)}
+
+/* ---------- product modal ---------- */
+let curProduct=null;
 function openProduct(id){
 const p=products.find(x=>String(x.id)===String(id));
 if(!p)return;
+curProduct=p;
 $("modalTitle").textContent=p.name;
 $("modalProduct").value=p.name;
+$("modalImg").src=p.image_url||IMAGES.notebook;$("modalImg").alt=p.name;
 const opts=p.options||[];
 $("productOption").innerHTML=opts.length?opts.map(o=>`<option value="${esc(optName(o))}">${esc(optName(o))}</option>`).join(""):"<option>Standard</option>";
-$("productPrice").textContent="Price: PKR "+(p.price_text||DEFAULT_PRICE);
+updateModalPrice();
 $("modal").classList.add("open");
 }
+function updateModalPrice(){
+if(!curProduct)return;
+const o=(curProduct.options||[]).find(x=>optName(x)===$("productOption").value);
+const t=o?optPrice(o,curProduct.price_text):curProduct.price_text;
+const el=$("productPrice");el.textContent=priceLabel(t);el.className="price-line"+(isAsk(t)?" ask":"");
+}
+$("productOption").addEventListener("change",updateModalPrice);
 
-/* ---------- Inquiries ---------- */
-function whatsappMessage(type,data,file){
-let m=`*${type} - ${SHOP}*\n\n`;
-const L={product:"Product",option:"Selected option",need:"Requirement",cat:"Category",qty:"Quantity",prescription:"Eye prescription"};
-for(const k of Object.keys(L))if(data[k])m+=`${L[k]}: ${data[k]}\n`;
-m+=`\nName: ${data.name||"Not provided"}\nPhone: ${data.phone||"Not provided"}\n`;
-if(data.msg)m+=`Message: ${data.msg}\n`;
-if(file)m+=`Prescription attachment: ${file.name} (I will attach it separately)\n`;
+/* ---------- inquiry list (basket) ---------- */
+let basket=lsGet("usm_basket",[]);
+function saveBasket(){lsSet("usm_basket",basket);renderBasketBtn()}
+function renderBasketBtn(){
+const n=basket.reduce((s,i)=>s+i.qty,0);
+$("basketBtn").hidden=!basket.length;$("basketCount").textContent=n;
+}
+function addToBasket(){
+const f=$("productInquiryForm");
+const option=f.option.value,qty=Math.max(1,Number(f.qty.value)||1);
+const ex=basket.find(i=>i.product===curProduct.name&&i.option===option);
+if(ex)ex.qty+=qty;else basket.push({product:curProduct.name,option,qty});
+saveBasket();$("modal").classList.remove("open");toast("Added to your inquiry list");
+}
+function renderBasket(){
+$("basketList").innerHTML=basket.map((i,idx)=>`<div class="bl-i"><div><b>${esc(i.product)}</b><small>${esc(i.option)}</small></div>
+<input type="number" min="1" value="${i.qty}" data-bq="${idx}" aria-label="Quantity"><button type="button" class="x" data-br="${idx}" aria-label="Remove">✕</button></div>`).join("")||'<p class="note">List is empty.</p>';
+$$("[data-bq]").forEach(i=>i.addEventListener("change",()=>{basket[i.dataset.bq].qty=Math.max(1,Number(i.value)||1);saveBasket()}));
+$$("[data-br]").forEach(b=>b.addEventListener("click",()=>{basket.splice(b.dataset.br,1);saveBasket();renderBasket();if(!basket.length)$("basketModal").classList.remove("open")}));
+}
+$("addToList").addEventListener("click",()=>{if($("productInquiryForm").reportValidity())addToBasket()});
+$("basketBtn").addEventListener("click",()=>{renderBasket();$("basketModal").classList.add("open")});
+$("closeBasket").addEventListener("click",()=>$("basketModal").classList.remove("open"));
+$("clearBasket").addEventListener("click",()=>{basket=[];saveBasket();$("basketModal").classList.remove("open")});
+
+/* =====================================================
+   E. INQUIRIES (WhatsApp + database)
+===================================================== */
+function buildWhatsApp(o){
+let m=`*${o.type} - ${SHOP}*\n\n`;
+(o.lines||[]).forEach(l=>m+=l+"\n");
+m+=`\nName: ${o.name||"Not provided"}\nPhone: ${o.phone||"Not provided"}\n`;
+if(o.msg)m+=`Message: ${o.msg}\n`;
+if(o.file)m+=`Prescription attachment: ${o.file.name} (I will attach it separately)\n`;
 return m;
 }
-async function saveInquiry(type,data,file){
-if(!db)throw new Error("Supabase is not connected.");
+async function saveInquiry(o){
+if(!db)throw new Error("Database is not connected.");
 let filePath=null;
-if(file){
-const safe=file.name.replace(/[^a-zA-Z0-9._-]/g,"_");
+if(o.file){
+const safe=o.file.name.replace(/[^a-zA-Z0-9._-]/g,"_");
 filePath=`${Date.now()}-${crypto.randomUUID()}-${safe}`;
-const {error}=await db.storage.from("prescriptions").upload(filePath,file,{upsert:false,contentType:file.type||"application/octet-stream"});
+const {error}=await db.storage.from("prescriptions").upload(filePath,o.file,{upsert:false,contentType:o.file.type||"application/octet-stream"});
 if(error)throw new Error("Prescription upload failed: "+error.message);
 }
 const row={
-inquiry_type:String(type),
-customer_name:String(data.name||"Not provided"),
-phone:String(data.phone||"Not provided"),
-product_name:String(data.product||data.cat||data.need||type).trim()||"General Inquiry",
-selected_option:String(data.option||data.prescription||data.need||"Not specified").trim()||"Not specified",
-quantity:Math.max(1,Number(data.qty)||1),
-message:[data.msg||"",data.need?"Requirement: "+data.need:"",data.cat?"Category: "+data.cat:""].filter(Boolean).join("\n"),
-prescription_details:data.prescription||"",
+inquiry_type:String(o.type),
+customer_name:String(o.name||"Not provided"),
+phone:String(o.phone||"Not provided"),
+product_name:String(o.product||o.type).trim()||"General Inquiry",
+selected_option:String(o.option||"Not specified").trim()||"Not specified",
+quantity:Math.max(1,Number(o.qty)||1),
+message:[o.msg||"",...(o.extra||[])].filter(Boolean).join("\n"),
+prescription_details:o.prescription||"",
 prescription_file_path:filePath||"none",
 status:"new"
 };
 const {error}=await db.from("inquiries").insert(row);
 if(error)throw new Error("Inquiry save failed: "+error.message);
 }
-async function handleInquiry(e,type){
-e.preventDefault();
-const form=e.currentTarget;
-const data=Object.fromEntries(new FormData(form).entries());
-const file=form.querySelector('input[type="file"]')?.files?.[0]||null;
-const number=val("shop_whatsapp").replace(/\D/g,"")||DEFAULT_WHATSAPP;
-const url=`https://wa.me/${number}?text=${encodeURIComponent(whatsappMessage(type,data,file))}`;
-const w=window.open(url,"_blank");  // before any await, so popup isn't blocked
-if(!w){alert("Please allow pop-ups for this website, then submit again.");return}
-try{await saveInquiry(type,data,file)}catch(err){console.error(err);alert("WhatsApp opened, but inquiry could not be saved: "+err.message)}
-if(file)alert("Please attach your prescription file manually in the WhatsApp chat.");
-form.reset();
-if(form.id==="productInquiryForm")$("modal").classList.remove("open");
+/* opens WhatsApp first (so the popup is not blocked), then saves */
+async function sendInquiry(o){
+const url=`https://wa.me/${waNumber()}?text=${encodeURIComponent(buildWhatsApp(o))}`;
+const w=window.open(url,"_blank");
+if(!w){alert("Please allow pop-ups for this website, then submit again.");return false}
+try{await saveInquiry(o)}catch(err){console.error(err);toast("WhatsApp opened, but inquiry could not be saved.",true)}
+if(o.file)alert("Please attach your prescription file manually in the WhatsApp chat.");
+return true;
 }
-$("opticalForm").addEventListener("submit",e=>handleInquiry(e,"Optical inquiry"));
-$("generalForm").addEventListener("submit",e=>handleInquiry(e,"General inquiry"));
-$("productInquiryForm").addEventListener("submit",e=>handleInquiry(e,"Product inquiry"));
+const formData=f=>Object.fromEntries([...new FormData(f).entries()].filter(([,v])=>typeof v==="string"));
+
+$("opticalForm").addEventListener("submit",async e=>{
+e.preventDefault();const f=e.currentTarget,d=formData(f);
+const file=f.querySelector('input[type="file"]').files[0]||null;
+const ok=await sendInquiry({type:"Optical inquiry",name:d.name,phone:d.phone,product:d.need,option:d.prescription,msg:d.msg,prescription:d.prescription,file,
+lines:[`Requirement: ${d.need}`,d.prescription?`Eye prescription: ${d.prescription}`:""].filter(Boolean),extra:["Requirement: "+d.need]});
+if(ok)f.reset();
+});
+$("generalForm").addEventListener("submit",async e=>{
+e.preventDefault();const f=e.currentTarget,d=formData(f);
+const ok=await sendInquiry({type:"General inquiry",name:d.name,phone:d.phone,product:d.cat,msg:d.msg,lines:[`Category: ${d.cat}`],extra:["Category: "+d.cat]});
+if(ok)f.reset();
+});
+$("productInquiryForm").addEventListener("submit",async e=>{
+e.preventDefault();const f=e.currentTarget,d=formData(f);
+const ok=await sendInquiry({type:"Product inquiry",name:d.name,phone:d.phone,product:d.product,option:d.option,qty:d.qty,msg:d.msg,
+lines:[`Product: ${d.product}`,`Selected option: ${d.option}`,`Quantity: ${d.qty}`]});
+if(ok){f.reset();$("modal").classList.remove("open")}
+});
+$("basketForm").addEventListener("submit",async e=>{
+e.preventDefault();if(!basket.length)return;
+const f=e.currentTarget,d=formData(f);
+const lines=basket.map((i,n)=>`${n+1}. ${i.product} (${i.option}) x ${i.qty}`);
+const ok=await sendInquiry({type:"Product inquiry",name:d.name,phone:d.phone,product:`Multiple items (${basket.length})`,option:basket.map(i=>i.option).join(", ").slice(0,200),
+qty:basket.reduce((s,i)=>s+i.qty,0),msg:d.msg,lines:["Items:",...lines],extra:lines});
+if(ok){basket=[];saveBasket();f.reset();$("basketModal").classList.remove("open")}
+});
+
+/* ---------- public site events ---------- */
 $("q").addEventListener("input",renderProducts);
+$("sort").addEventListener("change",renderProducts);
 $("closeModal").addEventListener("click",()=>$("modal").classList.remove("open"));
-$("modal").addEventListener("click",e=>{if(e.target.id==="modal")$("modal").classList.remove("open")});
+$$(".modal").forEach(m=>m.addEventListener("click",e=>{if(e.target===m)m.classList.remove("open")}));
+document.addEventListener("keydown",e=>{if(e.key==="Escape")$$(".modal.open").forEach(m=>m.classList.remove("open"))});
 $("burger").addEventListener("click",()=>$("nav").classList.toggle("show"));
 $("nav").addEventListener("click",()=>$("nav").classList.remove("show"));
 $("yr").textContent=new Date().getFullYear();
@@ -598,14 +843,18 @@ $("yr").textContent=new Date().getFullYear();
 async function loadProducts(){
 if(!db)return;
 const {data,error}=await db.from("products").select("*, categories(name), product_options(*)").eq("is_active",true).order("created_at",{ascending:false});
-if(error){console.error("Product loading:",error.message);return}
+if(error){console.error("Product loading:",error.message);renderProducts();return}
 if(data&&data.length){
-products=data.map(p=>({...p,category:p.categories?.name||p.category||"Other",options:(p.product_options||[]).map(o=>({name:o.name,price_text:o.price_text}))}));
+products=data.map(p=>({...p,category:p.categories?.name||p.category||"Other",
+options:(p.product_options||[]).filter(o=>o.is_active!==false).map(o=>({name:o.name,price_text:o.price_text}))}));
+}
 renderProducts();
 }
-}
 
-/* ---------- Admin ---------- */
+/* =====================================================
+   F. ADMIN: login, tabs, shell
+===================================================== */
+const TITLES={dash:"Dashboard",products:"Products",inquiries:"Inquiries",content:"Website content"};
 async function verifyAdmin(){
 if(!db)return false;
 const {data:{user}}=await db.auth.getUser();
@@ -615,7 +864,7 @@ return !error&&!!data;
 }
 $("adminOpen").addEventListener("click",async e=>{
 e.preventDefault();
-if(!db){alert("Supabase is not configured.");return}
+if(!db){alert("Database is not configured.");return}
 if(await verifyAdmin()){isAdmin=true;await showAdmin()}
 else{$("loginError").textContent="";$("loginModal").classList.add("open")}
 });
@@ -626,54 +875,100 @@ $("loginError").textContent="Signing in...";
 const {error}=await db.auth.signInWithPassword({email:$("loginEmail").value.trim(),password:$("loginPassword").value});
 if(error){$("loginError").textContent=error.message;return}
 if(!(await verifyAdmin())){await db.auth.signOut();$("loginError").textContent="This account is not in admin_users table.";return}
-isAdmin=true;$("loginModal").classList.remove("open");await showAdmin();
+isAdmin=true;$("loginPassword").value="";$("loginModal").classList.remove("open");await showAdmin();
 });
-async function showAdmin(){
-$("adminPanel").classList.add("show");
-renderContentEditor();
-$("adminPanel").scrollIntoView({behavior:"smooth"});
-setStatus("Admin authenticated.");
-await refreshAdminProducts();await refreshInquiries();
+function goTab(t){
+$$(".tab").forEach(x=>x.hidden=x.id!=="tab-"+t);
+$$("[data-tab]").forEach(b=>b.setAttribute("aria-current",b.dataset.tab===t));
+$("admTitle").textContent=TITLES[t];
+if(t==="content")renderContentEditor();
+document.querySelector(".adm-main").scrollTop=0;
 }
+async function showAdmin(){
+$("adm").hidden=false;document.body.style.overflow="hidden";
+goTab("dash");
+await Promise.all([refreshAdminProducts(),refreshInquiries()]);
+}
+function closeAdmin(){$("adm").hidden=true;document.body.style.overflow=""}
+$$("[data-tab]").forEach(b=>b.addEventListener("click",()=>goTab(b.dataset.tab)));
+$$("[data-go]").forEach(b=>b.addEventListener("click",()=>{goTab(b.dataset.go);if(b.dataset.new){resetProductForm();$("pFormBox").open=true}}));
+$("viewSite").addEventListener("click",closeAdmin);
+$("viewSite2").addEventListener("click",closeAdmin);
 $("logout").addEventListener("click",async()=>{
 if(db)await db.auth.signOut();
-isAdmin=false;$("adminPanel").classList.remove("show");location.hash="top";
+isAdmin=false;closeAdmin();location.hash="top";
 });
 
+/* ---------- Dashboard ---------- */
+let AP=[],AI=[];
+function renderDash(){
+const active=AP.filter(p=>p.is_active).length;
+const nw=AI.filter(i=>i.status==="new").length;
+$("stats").innerHTML=`
+<div class="stat ${nw?"hot":""}"><b>${nw}</b><span>New inquiries</span></div>
+<div class="stat"><b>${AI.length}</b><span>Total inquiries (last 100)</span></div>
+<div class="stat"><b>${AP.length}</b><span>Total products</span></div>
+<div class="stat"><b>${active}</b><span>Active on website</span></div>
+<div class="stat"><b>${AP.length-active}</b><span>Hidden products</span></div>`;
+$("dashInq").innerHTML=AI.slice(0,6).map(i=>`<tr><td>${esc(fmtDate(i.created_at))}</td><td>${esc(i.customer_name)}<br><small>${esc(i.phone)}</small></td><td>${esc(i.product_name)}</td><td><span class="tag ${i.status==="new"?"on":"off"}">${esc(i.status)}</span></td></tr>`).join("")||'<tr><td colspan="4">No inquiries yet.</td></tr>';
+const b=$("newBadge");b.hidden=!nw;b.textContent=nw;
+}
+
+/* ---------- Products (admin) ---------- */
 function resetProductForm(){
-$("adminProductForm").reset();$("editId").value="";$("pPrice").value=DEFAULT_PRICE;$("pActive").checked=true;$("productFormTitle").textContent="Add product";
+$("adminProductForm").reset();$("editId").value="";$("pPrice").value=DEFAULT_PRICE;$("pActive").checked=true;
+$("pPrev").hidden=true;$("productFormTitle").textContent="+ Add new product";
 }
 $("clearProduct").addEventListener("click",resetProductForm);
-
+$("pImage").addEventListener("change",()=>{
+const f=$("pImage").files[0];
+if(f){$("pPrev").src=URL.createObjectURL(f);$("pPrev").hidden=false}
+});
 async function refreshAdminProducts(){
 if(!db||!isAdmin)return;
 const {data,error}=await db.from("products").select("*, categories(name), product_options(*)").order("created_at",{ascending:false});
-if(error){setStatus("Could not load products: "+error.message,true);return}
-const rows=data||[];
-$("adminProducts").innerHTML=rows.map(p=>`<tr>
-<td>${p.image_url?`<img src="${esc(p.image_url)}" style="width:46px;height:46px;object-fit:cover;border-radius:8px" alt="">`:"—"}</td>
-<td>${esc(p.name)}</td><td>${esc(p.categories?.name||"")}</td><td>${esc(p.price_text||"0000")}</td>
-<td>${p.is_active?"Active":"Hidden"}</td>
-<td><button class="btn sm" data-edit="${esc(p.id)}">Edit</button> <button class="btn sm danger" data-delete="${esc(p.id)}">Delete</button></td>
-</tr>`).join("")||'<tr><td colspan="6">No products yet.</td></tr>';
-document.querySelectorAll("[data-edit]").forEach(b=>b.addEventListener("click",()=>{const p=rows.find(x=>String(x.id)===b.dataset.edit);if(p)editProduct(p)}));
-document.querySelectorAll("[data-delete]").forEach(b=>b.addEventListener("click",()=>deleteProduct(b.dataset.delete)));
+if(error){toast("Could not load products: "+error.message,true);return}
+AP=data||[];renderAdminProducts();renderDash();
 }
+function renderAdminProducts(){
+const q=$("apq").value.trim().toLowerCase(),c=$("apc").value,s=$("aps").value;
+const rows=AP.filter(p=>(!q||p.name.toLowerCase().includes(q))&&(!c||p.categories?.name===c)&&(s===""||String(p.is_active?1:0)===s));
+$("pCount").textContent=`(${rows.length} of ${AP.length})`;
+$("adminProducts").innerHTML=rows.map(p=>`<tr>
+<td>${p.image_url?`<img class="thumb" src="${esc(p.image_url)}" alt="">`:"—"}</td>
+<td><b>${esc(p.name)}</b><br><small>${(p.product_options||[]).length} options</small></td>
+<td>${esc(p.categories?.name||"")}</td><td>${esc(priceLabel(p.price_text))}</td>
+<td><span class="tag ${p.is_active?"on":"off"}">${p.is_active?"Active":"Hidden"}</span></td>
+<td><button class="btn sm" data-edit="${esc(p.id)}">Edit</button><button class="btn sm o" data-toggle="${esc(p.id)}">${p.is_active?"Hide":"Show"}</button><button class="btn sm danger" data-delete="${esc(p.id)}">Delete</button></td>
+</tr>`).join("")||'<tr><td colspan="6">No products found.</td></tr>';
+$$("[data-edit]").forEach(b=>b.addEventListener("click",()=>{const p=AP.find(x=>String(x.id)===b.dataset.edit);if(p)editProduct(p)}));
+$$("[data-toggle]").forEach(b=>b.addEventListener("click",()=>toggleProduct(b.dataset.toggle)));
+$$("[data-delete]").forEach(b=>b.addEventListener("click",()=>deleteProduct(b.dataset.delete)));
+}
+["apq","apc","aps"].forEach(id=>$(id).addEventListener("input",renderAdminProducts));
 function editProduct(p){
 $("editId").value=p.id;$("pName").value=p.name||"";
 $("pCategory").value=p.categories?.name||CATEGORIES[0];
 $("pPrice").value=p.price_text||DEFAULT_PRICE;
 $("pDescription").value=p.description||"";
-$("pOptions").value=(p.product_options||[]).map(o=>o.name).join("\n");
+$("pOptions").value=(p.product_options||[]).map(o=>o.price_text&&o.price_text!==p.price_text?`${o.name} | ${o.price_text}`:o.name).join("\n");
 $("pActive").checked=!!p.is_active;
-$("productFormTitle").textContent="Edit product (naye image na choose karein to purani rahegi)";
-$("adminProductForm").scrollIntoView({behavior:"smooth"});
+$("pPrev").hidden=!p.image_url;if(p.image_url)$("pPrev").src=p.image_url;
+$("productFormTitle").textContent="Editing: "+p.name+" (nayi image na chunein to purani rahegi)";
+$("pFormBox").open=true;$("pFormBox").scrollIntoView({behavior:"smooth"});
+}
+async function toggleProduct(id){
+const p=AP.find(x=>String(x.id)===String(id));if(!p)return;
+const {error}=await db.from("products").update({is_active:!p.is_active}).eq("id",id);
+if(error){toast(error.message,true);return}
+toast(p.is_active?"Product hidden":"Product visible");await refreshAdminProducts();await loadProducts();
 }
 async function deleteProduct(id){
-if(!confirm("Delete this product?"))return;
+if(!confirm("Delete this product permanently?"))return;
+await db.from("product_options").delete().eq("product_id",id);
 const {error}=await db.from("products").delete().eq("id",id);
-if(error){setStatus(error.message,true);return}
-setStatus("Product deleted.");await refreshAdminProducts();await loadProducts();
+if(error){toast(error.message,true);return}
+toast("Product deleted");await refreshAdminProducts();await loadProducts();
 }
 async function uploadImage(file,folder=""){
 const ext=(file.name.split(".").pop()||"jpg").replace(/[^a-z0-9]/gi,"");
@@ -685,12 +980,14 @@ return db.storage.from("product-images").getPublicUrl(path).data.publicUrl;
 $("adminProductForm").addEventListener("submit",async e=>{
 e.preventDefault();
 if(!isAdmin)return;
+const btn=$("pSave");btn.disabled=true;btn.textContent="Saving...";
 try{
 const id=$("editId").value;
 const {data:cat,error:ce}=await db.from("categories").select("id").eq("name",$("pCategory").value).maybeSingle();
 if(ce)throw ce;
-if(!cat)throw new Error("Category not found in Supabase categories table.");
-const payload={name:$("pName").value.trim(),category_id:cat.id,price_text:$("pPrice").value.trim()||DEFAULT_PRICE,description:$("pDescription").value.trim(),is_active:$("pActive").checked};
+if(!cat)throw new Error("Category not found in categories table.");
+const price=$("pPrice").value.trim()||DEFAULT_PRICE;
+const payload={name:$("pName").value.trim(),category_id:cat.id,price_text:price,description:$("pDescription").value.trim(),is_active:$("pActive").checked};
 const image=$("pImage").files[0];
 if(image)payload.image_url=await uploadImage(image,"products/");
 const saved=id?await db.from("products").update(payload).eq("id",id).select("id").single():await db.from("products").insert(payload).select("id").single();
@@ -698,49 +995,104 @@ if(saved.error)throw saved.error;
 const pid=saved.data.id;
 const {error:de}=await db.from("product_options").delete().eq("product_id",pid);
 if(de)throw de;
-const options=$("pOptions").value.split("\n").map(x=>x.trim()).filter(Boolean);
+const options=$("pOptions").value.split("\n").map(x=>x.trim()).filter(Boolean).map(line=>{
+const [n,p]=line.split("|").map(s=>s.trim());
+return {product_id:pid,name:n,price_text:p||price,is_active:true};
+});
 if(options.length){
-const {error:oe}=await db.from("product_options").insert(options.map(name=>({product_id:pid,name,price_text:payload.price_text,is_active:true})));
+const {error:oe}=await db.from("product_options").insert(options);
 if(oe)throw oe;
 }
-setStatus("Product saved successfully.");resetProductForm();await refreshAdminProducts();await loadProducts();
-}catch(err){setStatus("Save failed: "+err.message,true);console.error(err)}
+toast("Product saved");resetProductForm();await refreshAdminProducts();await loadProducts();
+}catch(err){toast("Save failed: "+err.message,true);console.error(err)}
+finally{btn.disabled=false;btn.textContent="Save product"}
 });
 $("refreshProducts").addEventListener("click",refreshAdminProducts);
 
+/* ---------- Inquiries (admin) ---------- */
 async function refreshInquiries(){
 if(!db||!isAdmin)return;
 const {data,error}=await db.from("inquiries").select("*").order("created_at",{ascending:false}).limit(100);
-if(error){$("adminInquiries").innerHTML=`<tr><td colspan="7">${esc(error.message)}</td></tr>`;return}
-const rows=data||[];
-$("adminInquiries").innerHTML=rows.map(i=>`<tr>
-<td>${i.created_at?new Date(i.created_at).toLocaleString():""}</td>
-<td>${esc(i.inquiry_type)}</td><td>${esc(i.customer_name)}</td><td>${esc(i.phone)}</td>
-<td>${esc([i.product_name,i.selected_option,i.message].filter(Boolean).join(" · "))}</td>
-<td>${i.prescription_file_path?`<button class="btn sm" data-file-view="${esc(i.prescription_file_path)}">View file</button>`:"—"}</td>
-<td><select data-status="${esc(i.id)}">${["new","contacted","completed"].map(s=>`<option value="${s}" ${i.status===s?"selected":""}>${s}</option>`).join("")}</select></td>
-</tr>`).join("")||'<tr><td colspan="7">No inquiries yet.</td></tr>';
-document.querySelectorAll("[data-file-view]").forEach(b=>b.addEventListener("click",()=>viewPrescription(b.dataset.fileView)));
-document.querySelectorAll("[data-status]").forEach(s=>s.addEventListener("change",async()=>{
+if(error){$("adminInquiries").innerHTML=`<tr><td colspan="6">${esc(error.message)}</td></tr>`;return}
+AI=data||[];renderAdminInquiries();renderDash();
+}
+function renderAdminInquiries(){
+const q=$("aiq").value.trim().toLowerCase(),s=$("ais").value;
+const rows=AI.filter(i=>(!s||i.status===s)&&(!q||`${i.customer_name} ${i.phone} ${i.product_name} ${i.message}`.toLowerCase().includes(q)));
+$("iCount").textContent=`(${rows.length} of ${AI.length})`;
+$("adminInquiries").innerHTML=rows.map(i=>{
+const reply=`https://wa.me/${normPhone(i.phone)}?text=${encodeURIComponent("Assalam o Alaikum "+(i.customer_name||"")+", "+SHOP+" se baat kar rahe hain, aapki inquiry ke bare mein.")}`;
+return `<tr>
+<td>${esc(fmtDate(i.created_at))}</td>
+<td>${esc(i.inquiry_type)}</td>
+<td><b>${esc(i.customer_name)}</b><br>${esc(i.phone)}<br><a class="btn sm g" style="margin-top:6px" href="${esc(reply)}" target="_blank" rel="noopener">Reply</a></td>
+<td><b>${esc(i.product_name)}</b>${i.quantity>1?" x "+esc(i.quantity):""}<br><small>${esc(i.selected_option||"")}</small><br><small>${esc(i.message||"").replace(/\n/g,"<br>")}</small></td>
+<td>${i.prescription_file_path&&i.prescription_file_path!=="none"?`<button class="btn sm" data-file-view="${esc(i.prescription_file_path)}">View file</button>`:"—"}</td>
+<td><select data-status="${esc(i.id)}">${["new","contacted","completed"].map(x=>`<option value="${x}" ${i.status===x?"selected":""}>${x}</option>`).join("")}</select></td>
+</tr>`}).join("")||'<tr><td colspan="6">No inquiries found.</td></tr>';
+$$("[data-file-view]").forEach(b=>b.addEventListener("click",()=>viewPrescription(b.dataset.fileView)));
+$$("[data-status]").forEach(s=>s.addEventListener("change",async()=>{
 const {error}=await db.from("inquiries").update({status:s.value}).eq("id",s.dataset.status);
-if(error)alert("Status update failed: "+error.message);
+if(error){toast("Status update failed: "+error.message,true);return}
+const r=AI.find(x=>String(x.id)===s.dataset.status);if(r)r.status=s.value;renderDash();toast("Status updated");
 }));
 }
+["aiq","ais"].forEach(id=>$(id).addEventListener("input",renderAdminInquiries));
 async function viewPrescription(path){
 const {data,error}=await db.storage.from("prescriptions").createSignedUrl(path,300);
-if(error){alert("Could not open prescription: "+error.message);return}
+if(error){toast("Could not open prescription: "+error.message,true);return}
 window.open(data.signedUrl,"_blank");
 }
 $("refreshInquiries").addEventListener("click",refreshInquiries);
 
-async function init(){
-fillCategorySelects();renderCategories();renderChips();renderProducts();
-collectDefaults();applyContent();
-if(db){
-await loadContent();await loadProducts();
-const {data:{session}}=await db.auth.getSession();
-if(session&&await verifyAdmin()){isAdmin=true;setStatus("Admin session active. Footer ka Admin link use karein.")}
+/* ---------- Website content editor (admin) ---------- */
+const GROUPS=[
+["brand","Logo / brand name"],["hero","Top banner (hero)"],["shop","Shop info: WhatsApp, address, hours"],
+["cat","Categories heading"],["catname","Category names"],["catdesc","Category descriptions"],["catimg","Category images"],
+["prod","Products heading"],["opt","Opticals section"],["why","Why Usmania"],["how","How to order"],
+["faq","FAQ"],["ct","Contact section"],["foot","Footer"]
+];
+function renderContentEditor(){
+const groups={};
+Object.keys(D).forEach(k=>{(groups[k.split("_")[0]]??=[]).push(k)});
+const order=[...GROUPS.map(g=>g[0]),...Object.keys(groups).filter(g=>!GROUPS.some(x=>x[0]===g))];
+$("contentEditor").innerHTML=order.filter(g=>groups[g]).map((g,idx)=>{
+const title=(GROUPS.find(x=>x[0]===g)||[g,g])[1];
+return `<details class="grp" ${idx<3?"open":""}><summary>${esc(title)}</summary><div class="agrid">`+groups[g].map(k=>IMG.has(k)
+?`<div class="cf"><label>${esc(k)}<img src="${esc(val(k))}" alt=""><input data-url="${esc(k)}" value="${esc(val(k))}" placeholder="Image URL"><input type="file" accept="image/*" data-file="${esc(k)}"></label></div>`
+:`<label>${esc(k)}<textarea data-txt="${esc(k)}" rows="${val(k).length>70?4:2}">${esc(val(k))}</textarea></label>`
+).join("")+"</div></details>";
+}).join("");
 }
+async function saveContent(){
+if(!isAdmin)return;
+const btn=$("saveContent");btn.disabled=true;btn.textContent="Saving...";
+try{
+const rows=[];
+$$("[data-txt]").forEach(t=>rows.push({key:t.dataset.txt,value:t.value.trim()}));
+for(const u of $$("[data-url]")){
+const k=u.dataset.url;
+const f=document.querySelector(`[data-file="${k}"]`).files[0];
+rows.push({key:k,value:f?await uploadImage(f,"site/"):u.value.trim()});
+}
+const {error}=await db.from("site_content").upsert(rows,{onConflict:"key"});
+if(error)throw error;
+rows.forEach(r=>{if(r.value)C[r.key]=r.value;else delete C[r.key]});
+applyContent();renderContentEditor();
+toast("Saved! Website update ho gayi.");
+}catch(e){toast("Save failed: "+e.message,true);console.error(e)}
+finally{btn.disabled=false;btn.textContent="💾 Save all changes"}
+}
+$("saveContent").addEventListener("click",saveContent);
+
+/* =====================================================
+   G. START
+===================================================== */
+async function init(){
+fillCategorySelects();renderCategories();renderChips();
+collectDefaults();applyContent();
+renderBasketBtn();showSkeleton();
+if(db){await Promise.all([loadContent(),loadProducts()])}else renderProducts();
 }
 init();
 </script>
