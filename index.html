@@ -6,6 +6,7 @@
 <title>Usmania Stationers & Opticals</title>
 <meta name="description" content="Stationery, gifts, toys, books, glasses and lenses at Usmania Stationers & Opticals. Browse and inquire on WhatsApp.">
 <meta name="theme-color" content="#0b2545">
+<script>try{var t=localStorage.getItem("usm_theme")||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light");document.documentElement.dataset.theme=t}catch(e){}</script>
 <meta property="og:title" content="Usmania Stationers & Opticals">
 <meta property="og:description" content="Stationery, gifts, toys, books, glasses and lenses in one shop.">
 <meta property="og:type" content="website">
@@ -18,13 +19,14 @@
 </script>
 <style>
 /* =====================================================
-   1. BASE / TOKENS
+   1. BASE / TOKENS  (light + dark theme)
 ===================================================== */
-:root{--navy:#0b2545;--navy2:#143a6b;--teal:#0fb5a8;--sun:#ffd23f;--soft:#f2f6fb;--ink:#0b2545;--mut:#566179;--line:#dce4ef;--ok:#0a7d5a;--bad:#b42318;--r:20px}
+:root{--navy:#0b2545;--teal:#0fb5a8;--sun:#ffd23f;--bg:#fff;--card:#fff;--soft:#f2f6fb;--ink:#0b2545;--mut:#566179;--line:#dce4ef;--pic:#edf2f7;--adm:#eef3f8;--btn:#0b2545;--btnink:#fff;--ok:#0a7d5a;--bad:#b42318;--r:20px;color-scheme:light}
+[data-theme=dark]{--bg:#0a1424;--card:#111e33;--soft:#0e1a2e;--ink:#e6edf8;--mut:#9aa9c2;--line:#25344d;--pic:#16243b;--adm:#070f1c;--btn:#0fb5a8;--btnink:#06222a;--ok:#3ddc97;color-scheme:dark}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:84px}
-body{font-family:Manrope,system-ui,sans-serif;color:var(--ink);line-height:1.65;background:#fff}
-h1,h2,h3{font-family:Sora,sans-serif;line-height:1.12;letter-spacing:-.02em}
+body{font-family:Manrope,system-ui,sans-serif;color:var(--ink);line-height:1.65;background:var(--bg);transition:background .2s,color .2s}
+h1,h2,h3,h4{font-family:Sora,sans-serif;line-height:1.12;letter-spacing:-.02em}
 a{color:inherit;text-decoration:none}
 button,input,select,textarea{font:inherit;color:inherit}
 button{cursor:pointer}
@@ -40,34 +42,35 @@ h2{font-size:clamp(1.9rem,3.6vw,2.8rem);margin-bottom:14px}
 .note{font-size:.85rem;color:var(--mut)}
 
 /* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:0;background:var(--navy);color:#fff;border-radius:14px;padding:13px 22px;font-weight:700;transition:.15s}
-.btn:hover{transform:translateY(-2px);background:var(--navy2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:0;background:var(--btn);color:var(--btnink);border-radius:14px;padding:13px 22px;font-weight:700;transition:.15s}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.12)}
 .btn:disabled{opacity:.6;cursor:wait;transform:none}
 .btn.y{background:var(--sun);color:var(--navy)}
 .btn.o{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
 .btn.g{background:#25d366;color:#fff}
 .btn.sm{padding:9px 15px;font-size:.88rem;border-radius:12px}
-.btn.danger{background:var(--bad)}
+.btn.danger{background:var(--bad);color:#fff}
 
 /* forms */
-form{background:#fff;border-radius:var(--r);padding:26px;display:grid;gap:14px;border:1px solid var(--line);color:var(--ink)}
+form{background:var(--card);border-radius:var(--r);padding:26px;display:grid;gap:14px;border:1px solid var(--line);color:var(--ink)}
 label{display:grid;gap:6px;font-weight:700;font-size:.9rem}
-input,select,textarea{width:100%;background:#fff;border:2px solid var(--line);border-radius:12px;padding:12px 14px}
+input,select,textarea{width:100%;background:var(--card);border:2px solid var(--line);border-radius:12px;padding:12px 14px}
 input:focus,select:focus,textarea:focus{border-color:var(--teal);outline:0}
 textarea{resize:vertical}
 
 /* =====================================================
    2. HEADER
 ===================================================== */
-header.site{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid var(--line)}
-.bar{height:72px;display:flex;align-items:center;gap:22px}
+header.site{position:sticky;top:0;z-index:40;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{height:72px;display:flex;align-items:center;gap:14px}
 .logo{display:flex;align-items:center;gap:10px;font-family:Sora;font-weight:800}
 .logo small{display:block;font-family:Manrope;font-size:.72rem;color:var(--mut);font-weight:500}
 .mark{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--navy),var(--teal));color:var(--sun);display:grid;place-items:center;font-size:1.4rem}
 nav{margin-left:auto;display:flex;gap:20px;font-weight:700;font-size:.9rem}
 nav a{color:var(--mut)}
 nav a:hover{color:var(--teal)}
-.burger{display:none;margin-left:auto;background:#fff;border:2px solid var(--line);border-radius:12px;width:44px;height:44px}
+.theme{background:var(--card);border:2px solid var(--line);border-radius:12px;width:44px;height:44px;font-size:1.1rem;flex:none}
+.burger{display:none;background:var(--card);border:2px solid var(--line);border-radius:12px;width:44px;height:44px}
 
 /* =====================================================
    3. HERO
@@ -90,8 +93,8 @@ nav a:hover{color:var(--teal)}
    4. CATEGORIES + PRODUCTS
 ===================================================== */
 .rows{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
-.crow{min-width:0;overflow:hidden;display:flex;flex-direction:column;gap:12px;padding:12px;border:1px solid var(--line);border-radius:18px;background:#fff;text-align:left;transition:.2s}
-.crow:hover{transform:translateY(-4px);box-shadow:0 12px 28px #0b254515;border-color:var(--teal)}
+.crow{min-width:0;overflow:hidden;display:flex;flex-direction:column;gap:12px;padding:12px;border:1px solid var(--line);border-radius:18px;background:var(--card);text-align:left;transition:.2s}
+.crow:hover{transform:translateY(-4px);box-shadow:0 12px 28px #0b254522;border-color:var(--teal)}
 .crow .ic{display:block;width:100%;height:125px;border-radius:13px;overflow:hidden}
 .crow img{width:100%;height:100%;object-fit:cover;transition:.3s}
 .crow:hover img{transform:scale(1.05)}
@@ -102,14 +105,15 @@ nav a:hover{color:var(--teal)}
 .tools{display:grid;grid-template-columns:1fr 190px;gap:12px;margin-bottom:16px}
 .chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
 .chips.subs .chip{padding:6px 13px;font-size:.85rem;border-radius:999px}
-.chip{border:2px solid var(--line);background:#fff;border-radius:12px;padding:9px 16px;font-weight:700}
-.chip[aria-pressed=true]{background:var(--navy);border-color:var(--navy);color:#fff}
+.chip{border:2px solid var(--line);background:var(--card);border-radius:12px;padding:9px 16px;font-weight:700}
+.chip[aria-pressed=true]{background:var(--btn);border-color:var(--btn);color:var(--btnink)}
 .count{color:var(--mut);font-size:.9rem;margin:6px 0 18px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px}
-.pc{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;min-width:0;transition:.2s}
-.pc:hover{box-shadow:0 12px 28px #0b254515;transform:translateY(-3px)}
-.pic{height:190px;background:#edf2f7;overflow:hidden}
-.pic img{width:100%;height:100%;object-fit:cover}
+.pc{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;min-width:0;transition:.2s}
+.pc:hover{box-shadow:0 12px 28px #0b254522;transform:translateY(-3px)}
+/* product image: fixed ratio, whole image visible, never oversized */
+.pic{aspect-ratio:4/3;width:100%;background:var(--pic);overflow:hidden;display:grid;place-items:center}
+.pic img{width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain;padding:8px}
 .pin{padding:18px;display:flex;flex-direction:column;gap:5px;flex:1}
 .pin small{color:var(--mut)}
 .pin h3{font-size:1.08rem}
@@ -117,26 +121,26 @@ nav a:hover{color:var(--teal)}
 .price-line{font-weight:800;margin:5px 0 10px}
 .price-line.ask{color:var(--teal)}
 .empty{grid-column:1/-1;text-align:center;padding:40px;color:var(--mut)}
-.skel{height:300px;border-radius:var(--r);background:linear-gradient(90deg,#edf2f7,#f8fafc,#edf2f7);background-size:200% 100%;animation:sk 1.2s infinite}
+.skel{height:300px;border-radius:var(--r);background:linear-gradient(90deg,var(--pic),var(--soft),var(--pic));background-size:200% 100%;animation:sk 1.2s infinite}
 @keyframes sk{to{background-position:-200% 0}}
 
 /* =====================================================
    5. OPTICALS / WHY / HOW / FAQ / CONTACT
 ===================================================== */
-.opt{background:var(--teal);color:var(--navy)}
+/* opticals section keeps its own light palette in both themes */
+.opt{background:var(--teal);color:#0b2545;--ink:#0b2545;--mut:#566179;--card:#fff;--line:#dce4ef;--btn:#0b2545;--btnink:#fff;color-scheme:light}
 .og{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
 .opt .sub{color:#0a3c46}
-.opt .k{color:var(--navy)}
+.opt .k{color:#0b2545}
 .ol{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .ol li{background:#fffffff0;border-radius:16px;padding:18px}
 .ol b{display:block;font-family:Sora;margin-bottom:4px}
 .ol p{font-size:.92rem;color:var(--mut)}
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-.st,.wb{background:var(--soft);border-radius:var(--r);padding:26px}
-.st i{font-style:normal;width:40px;height:40px;border-radius:12px;background:var(--sun);display:grid;place-items:center;font-weight:800;margin-bottom:14px}
+.st,.wb{background:var(--soft);border:1px solid var(--line);border-radius:var(--r);padding:26px}
+.st i{font-style:normal;width:40px;height:40px;border-radius:12px;background:var(--sun);color:var(--navy);display:grid;place-items:center;font-weight:800;margin-bottom:14px}
 .st p,.wb p{color:var(--mut);font-size:.95rem}
 .why{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-.wb{border:1px solid var(--line)}
 .wb h3{margin:10px 0 6px;font-size:1.2rem}
 details.faq{border-bottom:1px solid var(--line);padding:18px 0}
 details.faq summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between}
@@ -145,43 +149,57 @@ details.faq[open] summary:after{content:"–"}
 details.faq p{color:var(--mut);margin-top:10px}
 .ct{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:start}
 .info{display:grid;gap:12px}
-.info div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 18px}
+.info>div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px}
 .info small{display:block;color:var(--mut)}
 
+/* social links */
+.soc{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.soc a{display:inline-flex;align-items:center;border-radius:999px;padding:6px 14px;font-weight:700;font-size:.85rem;background:var(--soft);border:1px solid var(--line);transition:.15s}
+.soc a:hover{transform:translateY(-2px);color:#fff;border-color:transparent}
+.soc .s-facebook:hover{background:#1877f2}
+.soc .s-instagram:hover{background:#d62976}
+.soc .s-linkedin:hover{background:#0a66c2}
+.soc .s-youtube:hover{background:#e00}
+.soc .s-tiktok:hover{background:#111}
+
 footer.site{background:var(--navy);color:#bccbe3;padding:34px 0}
-footer.site .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer.site .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
 footer.site b{color:#fff;font-family:Sora}
+footer.site .soc{margin:0}
+footer.site .soc a{background:#ffffff1a;border-color:#ffffff22;color:#fff}
 .admin-link{font-size:.8rem;color:#aab9d0}
 
 /* floating buttons */
 .fl{position:fixed;right:18px;bottom:18px;z-index:35;display:grid;gap:10px;justify-items:end}
 .fl a{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:#25d366;color:#fff;font-weight:800;font-size:.7rem;box-shadow:0 8px 20px #0004}
-.fb{position:fixed;left:18px;bottom:18px;z-index:35;background:var(--navy);color:#fff;border:0;border-radius:999px;padding:13px 20px;font-weight:700;box-shadow:0 8px 20px #0004}
+.fb{position:fixed;left:18px;bottom:18px;z-index:35;background:var(--btn);color:var(--btnink);border:0;border-radius:999px;padding:13px 20px;font-weight:700;box-shadow:0 8px 20px #0004}
 .fb b{background:var(--sun);color:var(--navy);border-radius:999px;padding:2px 9px;margin-left:6px}
 
 /* modals */
 .modal{position:fixed;inset:0;background:#071428aa;display:none;place-items:center;z-index:60;padding:16px}
 .modal.open{display:grid}
+#rxModal{z-index:150}
 .modal form{width:min(480px,100%);max-height:92vh;overflow:auto}
 .x{justify-self:end;background:none;border:0;font-size:1.5rem}
-.pm-img{height:170px;border-radius:14px;overflow:hidden;background:#edf2f7}
-.pm-img img{width:100%;height:100%;object-fit:cover}
+.pm-img{aspect-ratio:16/10;border-radius:14px;overflow:hidden;background:var(--pic)}
+.pm-img img{width:100%;height:100%;object-fit:contain;padding:6px}
 .pm-btns{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .bl{display:grid;gap:8px}
 .bl-i{display:flex;align-items:center;gap:10px;background:var(--soft);border-radius:12px;padding:10px 12px}
 .bl-i div{flex:1;min-width:0}
 .bl-i small{color:var(--mut);display:block}
 .bl-i input{width:68px;padding:8px}
+.rx-img{max-height:65vh;width:100%;object-fit:contain;border-radius:12px;background:var(--pic)}
 
 /* toast */
-.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:var(--navy);color:#fff;padding:12px 20px;border-radius:12px;z-index:200;opacity:0;transition:.25s;pointer-events:none;max-width:90vw;font-weight:700;font-size:.9rem}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:#0b2545;border:1px solid #ffffff33;color:#fff;padding:12px 20px;border-radius:12px;z-index:200;opacity:0;transition:.25s;pointer-events:none;max-width:90vw;font-weight:700;font-size:.9rem}
 .toast.show{opacity:1;transform:translateX(-50%)}
 .toast.err{background:var(--bad)}
 
 /* =====================================================
    6. ADMIN PANEL
 ===================================================== */
-.adm{position:fixed;inset:0;z-index:100;background:#eef3f8;display:grid;grid-template-columns:230px 1fr;overflow:hidden}
+.adm{position:fixed;inset:0;z-index:100;background:var(--adm);color:var(--ink);display:grid;grid-template-columns:230px 1fr;overflow:hidden}
 .adm[hidden]{display:none}
 .adm-side{background:var(--navy);color:#fff;padding:22px 14px;display:flex;flex-direction:column;gap:6px;overflow:auto}
 .adm-side .logo{padding:0 8px 18px;color:#fff}
@@ -193,47 +211,61 @@ footer.site b{color:#fff;font-family:Sora}
 .adm-main{overflow:auto;padding:26px 30px 80px}
 .adm-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px}
 .adm-top h2{margin:0;font-size:1.7rem}
-.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:16px}
 .card h3{font-size:1.1rem;margin-bottom:12px}
 .card-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
 .card-head h3{margin:0}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin-bottom:16px}
-.stat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
 .stat b{display:block;font-family:Sora;font-size:2rem;line-height:1.1}
 .stat span{color:var(--mut);font-size:.88rem}
-.stat.hot{background:var(--sun);border-color:var(--sun)}
+.stat.hot{background:var(--sun);border-color:var(--sun);color:var(--navy)}
+.stat.hot span{color:#0b2545}
 .agrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
-.adm form{border:0;padding:0}
+.adm form{border:0;padding:0;background:transparent}
 .tbl{overflow:auto}
 .adm table{width:100%;border-collapse:collapse;min-width:680px}
 .adm th,.adm td{text-align:left;padding:10px;border-bottom:1px solid var(--line);font-size:.88rem;vertical-align:top}
 .adm th{color:var(--mut);font-size:.78rem;text-transform:uppercase;letter-spacing:.04em}
 .adm td .btn{margin:0 4px 4px 0}
 .tag{display:inline-block;border-radius:999px;padding:2px 10px;font-size:.78rem;font-weight:700}
-.tag.on{background:#e7f7f3;color:var(--ok)}
-.tag.off{background:#eee;color:var(--mut)}
-.thumb{width:46px;height:46px;object-fit:cover;border-radius:8px;background:#eee}
+.tag.on{background:#0a7d5a26;color:var(--ok)}
+.tag.off{background:var(--soft);color:var(--mut)}
+.thumb{width:46px;height:46px;object-fit:cover;border-radius:8px;background:var(--pic)}
 .filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
 .filters input{max-width:280px}
-.filters select{max-width:180px}
-details.grp{background:#fff;border:1px solid var(--line);border-radius:16px;margin-bottom:12px}
+.filters select{max-width:200px}
+details.grp{background:var(--card);border:1px solid var(--line);border-radius:16px;margin-bottom:12px}
 details.grp>summary{cursor:pointer;font-weight:800;padding:16px 20px;font-family:Sora}
 details.grp>div{padding:0 20px 20px}
-.cf img{height:80px;width:auto;border-radius:8px;object-fit:cover;background:#eee;margin:4px 0}
-.cf small,.kk{font-weight:500;color:var(--mut);font-size:.75rem}
-.savebar{position:sticky;top:-26px;z-index:5;background:#eef3f8;padding:10px 0;display:flex;justify-content:flex-end;gap:10px}
+.cf img{height:80px;width:auto;border-radius:8px;object-fit:cover;background:var(--pic);margin:4px 0}
+.kk{font-weight:500;color:var(--mut);font-size:.75rem}
+.savebar{position:sticky;top:-26px;z-index:5;background:var(--adm);padding:10px 0;display:flex;justify-content:flex-end;gap:10px}
 .pform-prev{max-height:90px;border-radius:10px;margin-top:6px}
+
+/* inquiries board: New / In progress / Completed */
+.board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:start}
+.col{background:var(--soft);border:1px solid var(--line);border-radius:16px;padding:12px;display:grid;gap:10px;max-height:74vh;overflow:auto;align-content:start}
+.col h4{font-size:1rem;display:flex;justify-content:space-between;align-items:center;position:sticky;top:-12px;background:var(--soft);padding:6px 2px;z-index:1}
+.col.new{border-top:4px solid var(--sun)}
+.col.prog{border-top:4px solid var(--teal)}
+.col.done{border-top:4px solid #3ddc97}
+.iq{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;gap:6px;font-size:.88rem;word-break:break-word}
+.iq .meta{display:flex;justify-content:space-between;gap:8px;color:var(--mut);font-size:.78rem}
+.iq .rx{background:var(--soft);border:1px dashed var(--teal);border-radius:10px;padding:8px 10px}
+.iq .acts2{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
 
 /* =====================================================
    7. RESPONSIVE
 ===================================================== */
-@media(max-width:1000px){.rows{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:1000px){.rows{grid-template-columns:repeat(3,minmax(0,1fr))}.board{grid-template-columns:1fr}.col{max-height:none}}
 @media(max-width:860px){
 .hero .wrap,.og,.ct{grid-template-columns:1fr}
 .hero .txt{padding-bottom:20px}
 .hero-gallery{grid-template-rows:120px 120px 90px}
-nav{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;flex-direction:column;padding:18px 22px;border-bottom:1px solid var(--line)}
+nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--bg);flex-direction:column;padding:18px 22px;border-bottom:1px solid var(--line)}
 nav.show{display:flex}
+.theme{margin-left:auto}
 .burger{display:block}
 .hm{display:none}
 section{padding:58px 0}
@@ -251,7 +283,6 @@ section{padding:58px 0}
 .crow .ic{height:105px}
 .crow h3{font-size:.95rem}
 .crow p{font-size:.75rem}
-.pic{height:155px}
 .hero-gallery{gap:8px}
 .tools{grid-template-columns:1fr}
 .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
@@ -271,6 +302,7 @@ section{padding:58px 0}
 <a href="#categories">Categories</a><a href="#products">Products</a><a href="#opticals">Opticals</a><a href="#how">How to order</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
 </nav>
 <a class="btn sm hm" href="#contact">Send inquiry</a>
+<button class="theme" id="themeBtn" aria-label="Switch dark or light theme" title="Dark / Light">🌙</button>
 <button class="burger" id="burger" aria-label="Open menu">☰</button>
 </div></header>
 
@@ -381,6 +413,7 @@ section{padding:58px 0}
 <div><small>Phone / WhatsApp</small><a id="shopPhone"></a> · <a id="contactWhatsApp" href="#">WhatsApp chat</a></div>
 <div><small>Address</small><span data-t="shop_address">Shop address to be added</span></div>
 <div><small>Opening hours</small><span data-t="shop_hours">9 AM to 9 PM</span></div>
+<div id="socBox" hidden><small>Follow us</small><div class="soc" id="socContact"></div></div>
 </div>
 </div>
 <form id="generalForm">
@@ -396,6 +429,7 @@ section{padding:58px 0}
 
 <footer class="site"><div class="wrap">
 <b data-t="foot_name">Usmania Stationers & Opticals</b>
+<div class="soc" id="socFooter"></div>
 <span>© <span id="yr"></span> All rights reserved. · <a class="admin-link" href="#admin" id="adminOpen">Admin</a></span>
 </div></footer>
 
@@ -434,6 +468,16 @@ section{padding:58px 0}
 <label>Message<textarea name="msg" rows="2"></textarea></label>
 <button class="btn g" type="submit">Send whole list on WhatsApp</button>
 <button class="btn o" type="button" id="clearBasket">Clear list</button>
+</form>
+</div>
+
+<!-- prescription viewer -->
+<div class="modal" id="rxModal" role="dialog" aria-modal="true">
+<form id="rxForm" style="width:min(720px,100%)">
+<button type="button" class="x" id="closeRx" aria-label="Close">✕</button>
+<h3>Prescription</h3>
+<div id="rxBody"></div>
+<a class="btn sm" id="rxOpen" target="_blank" rel="noopener">Open / download</a>
 </form>
 </div>
 
@@ -523,12 +567,14 @@ section{padding:58px 0}
 <div class="card-head"><h3>Customer inquiries <span class="note" id="iCount"></span></h3><button class="btn sm" id="refreshInquiries">Refresh</button></div>
 <div class="filters">
 <input id="aiq" type="search" placeholder="Search name, phone, product...">
-<select id="ais"><option value="">All status</option><option value="new">New</option><option value="contacted">Contacted</option><option value="completed">Completed</option></select>
+<select id="ais"><option value="">All types</option><option value="Product inquiry">Product inquiries</option><option value="Optical inquiry">Optical inquiries</option><option value="General inquiry">General inquiries</option></select>
 </div>
-<div class="tbl"><table>
-<thead><tr><th>Date</th><th>Type</th><th>Customer</th><th>Details</th><th>Prescription</th><th>Status</th></tr></thead>
-<tbody id="adminInquiries"></tbody>
-</table></div>
+<p class="note">Nayi inquiry <b>New</b> mein aati hai. "Reply" dabane par wo khud <b>In progress</b> mein chali jati hai, aur kaam khatam hone par "Mark completed" se <b>Completed</b> mein.</p>
+</div>
+<div class="board">
+<div class="col new"><h4>🆕 New <span class="badge" id="cNew">0</span></h4><div id="colNew" style="display:grid;gap:10px"></div></div>
+<div class="col prog"><h4>⏳ In progress <span class="badge" id="cProg">0</span></h4><div id="colProg" style="display:grid;gap:10px"></div></div>
+<div class="col done"><h4>✅ Completed <span class="badge" id="cDone">0</span></h4><div id="colDone" style="display:grid;gap:10px"></div></div>
 </div>
 </div>
 
@@ -623,6 +669,8 @@ const isAsk=t=>!t||/^0+$/.test(String(t).trim());
 const priceLabel=t=>isAsk(t)?"Price on inquiry":"PKR "+t;
 const optName=o=>typeof o==="string"?o:o.name;
 const optPrice=(o,p)=>(typeof o==="object"&&o.price_text)?o.price_text:p;
+const ST={new:"New",contacted:"In progress",completed:"Completed"};
+const normStatus=i=>(i.status==="contacted"||i.status==="completed")?i.status:"new";
 function waNumber(){return (val("shop_whatsapp")||"").replace(/\D/g,"")||DEFAULT_WHATSAPP}
 function normPhone(p){let d=String(p||"").replace(/\D/g,"");if(d.startsWith("0"))d="92"+d.slice(1);else if(d.length===10&&d[0]==="3")d="92"+d;return d}
 function fmtDate(d){return d?new Date(d).toLocaleString("en-GB",{day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"}):""}
@@ -642,6 +690,7 @@ function collectDefaults(){
 $$("[data-t]").forEach(e=>{if(!(e.dataset.t in D))D[e.dataset.t]=e.textContent.trim()});
 $$("[data-i]").forEach(e=>{if(!(e.dataset.i in D)){D[e.dataset.i]=e.getAttribute("src");IMG.add(e.dataset.i)}});
 D.shop_whatsapp=DEFAULT_WHATSAPP;
+["facebook","instagram","linkedin","youtube","tiktok"].forEach(x=>D["social_"+x]="");
 }
 function applyContent(){
 $$("[data-t]").forEach(e=>e.textContent=val(e.dataset.t));
@@ -650,6 +699,17 @@ const n=waNumber();
 const link=`https://wa.me/${n}?text=${encodeURIComponent("Hello, I would like to make an inquiry.")}`;
 $("wa").href=link;$("contactWhatsApp").href=link;
 $("shopPhone").textContent="+"+n;$("shopPhone").href="tel:+"+n;
+renderSocial();
+}
+const SOCIALS=[["facebook","Facebook"],["instagram","Instagram"],["linkedin","LinkedIn"],["youtube","YouTube"],["tiktok","TikTok"]];
+function socialUrl(v){
+v=(v||"").trim();if(!v)return"";
+if(!/^https?:\/\//i.test(v))v="https://"+v;
+try{const u=new URL(v);return /^https?:$/.test(u.protocol)?u.href:""}catch(e){return""}
+}
+function renderSocial(){
+const html=SOCIALS.map(([k,n])=>{const u=socialUrl(val("social_"+k));return u?`<a class="s-${k}" href="${esc(u)}" target="_blank" rel="noopener noreferrer">${n}</a>`:""}).join("");
+$("socContact").innerHTML=html;$("socFooter").innerHTML=html;$("socBox").hidden=!html;
 }
 async function loadContent(){
 if(!db)return;
@@ -770,12 +830,18 @@ return m;
 }
 async function saveInquiry(o){
 if(!db)throw new Error("Database is not connected.");
-let filePath=null;
+let filePath=null,uploadNote="";
 if(o.file){
-const safe=o.file.name.replace(/[^a-zA-Z0-9._-]/g,"_");
+try{
+const up=await resizeImage(o.file,1800);
+const safe=up.name.replace(/[^a-zA-Z0-9._-]/g,"_");
 filePath=`${Date.now()}-${crypto.randomUUID()}-${safe}`;
-const {error}=await db.storage.from("prescriptions").upload(filePath,o.file,{upsert:false,contentType:o.file.type||"application/octet-stream"});
-if(error)throw new Error("Prescription upload failed: "+error.message);
+const {error}=await db.storage.from("prescriptions").upload(filePath,up,{upsert:false,contentType:up.type||"application/octet-stream"});
+if(error)throw error;
+}catch(err){
+filePath=null;uploadNote="(Prescription file could not be uploaded: "+(err.message||err)+" - customer will send it on WhatsApp)";
+console.error(err);
+}
 }
 const row={
 inquiry_type:String(o.type),
@@ -784,7 +850,7 @@ phone:String(o.phone||"Not provided"),
 product_name:String(o.product||o.type).trim()||"General Inquiry",
 selected_option:String(o.option||"Not specified").trim()||"Not specified",
 quantity:Math.max(1,Number(o.qty)||1),
-message:[o.msg||"",...(o.extra||[])].filter(Boolean).join("\n"),
+message:[o.msg||"",...(o.extra||[]),uploadNote].filter(Boolean).join("\n"),
 prescription_details:o.prescription||"",
 prescription_file_path:filePath||"none",
 status:"new"
@@ -839,6 +905,14 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape")$$(".modal.open").fo
 $("burger").addEventListener("click",()=>$("nav").classList.toggle("show"));
 $("nav").addEventListener("click",()=>$("nav").classList.remove("show"));
 $("yr").textContent=new Date().getFullYear();
+function setTheme(t){
+document.documentElement.dataset.theme=t;
+try{localStorage.setItem("usm_theme",t)}catch(e){}
+$("themeBtn").textContent=t==="dark"?"☀️":"🌙";
+document.querySelector('meta[name=theme-color]').content=t==="dark"?"#0a1424":"#0b2545";
+}
+$("themeBtn").addEventListener("click",()=>setTheme(document.documentElement.dataset.theme==="dark"?"light":"dark"));
+setTheme(document.documentElement.dataset.theme||"light");
 
 async function loadProducts(){
 if(!db)return;
@@ -903,14 +977,15 @@ isAdmin=false;closeAdmin();location.hash="top";
 let AP=[],AI=[];
 function renderDash(){
 const active=AP.filter(p=>p.is_active).length;
-const nw=AI.filter(i=>i.status==="new").length;
+const nw=AI.filter(i=>normStatus(i)==="new").length,pg=AI.filter(i=>normStatus(i)==="contacted").length,dn=AI.filter(i=>normStatus(i)==="completed").length;
 $("stats").innerHTML=`
 <div class="stat ${nw?"hot":""}"><b>${nw}</b><span>New inquiries</span></div>
-<div class="stat"><b>${AI.length}</b><span>Total inquiries (last 100)</span></div>
+<div class="stat"><b>${pg}</b><span>In progress</span></div>
+<div class="stat"><b>${dn}</b><span>Completed</span></div>
 <div class="stat"><b>${AP.length}</b><span>Total products</span></div>
 <div class="stat"><b>${active}</b><span>Active on website</span></div>
 <div class="stat"><b>${AP.length-active}</b><span>Hidden products</span></div>`;
-$("dashInq").innerHTML=AI.slice(0,6).map(i=>`<tr><td>${esc(fmtDate(i.created_at))}</td><td>${esc(i.customer_name)}<br><small>${esc(i.phone)}</small></td><td>${esc(i.product_name)}</td><td><span class="tag ${i.status==="new"?"on":"off"}">${esc(i.status)}</span></td></tr>`).join("")||'<tr><td colspan="4">No inquiries yet.</td></tr>';
+$("dashInq").innerHTML=AI.slice(0,6).map(i=>`<tr><td>${esc(fmtDate(i.created_at))}</td><td>${esc(i.customer_name)}<br><small>${esc(i.phone)}</small></td><td>${esc(i.product_name)}</td><td><span class="tag ${normStatus(i)==="new"?"on":"off"}">${esc(ST[normStatus(i)])}</span></td></tr>`).join("")||'<tr><td colspan="4">No inquiries yet.</td></tr>';
 const b=$("newBadge");b.hidden=!nw;b.textContent=nw;
 }
 
@@ -970,7 +1045,22 @@ const {error}=await db.from("products").delete().eq("id",id);
 if(error){toast(error.message,true);return}
 toast("Product deleted");await refreshAdminProducts();await loadProducts();
 }
+async function resizeImage(file,max=1000){
+if(!/^image\/(jpeg|png|webp)$/.test(file.type))return file;
+try{
+const bmp=await createImageBitmap(file);
+const sc=Math.min(1,max/Math.max(bmp.width,bmp.height));
+if(sc===1&&file.size<400000)return file;
+const w=Math.round(bmp.width*sc),h=Math.round(bmp.height*sc);
+const cv=document.createElement("canvas");cv.width=w;cv.height=h;
+cv.getContext("2d").drawImage(bmp,0,0,w,h);
+const blob=await new Promise(r=>cv.toBlob(r,"image/webp",.85));
+if(!blob||blob.size>=file.size&&sc===1)return file;
+return new File([blob],file.name.replace(/\.\w+$/,"")+"."+blob.type.split("/")[1],{type:blob.type});
+}catch(e){return file}
+}
 async function uploadImage(file,folder=""){
+file=await resizeImage(file,folder==="site/"?1600:1000);
 const ext=(file.name.split(".").pop()||"jpg").replace(/[^a-z0-9]/gi,"");
 const path=`${folder}${Date.now()}-${crypto.randomUUID()}.${ext}`;
 const {error}=await db.storage.from("product-images").upload(path,file,{upsert:false,contentType:file.type});
@@ -1009,45 +1099,73 @@ finally{btn.disabled=false;btn.textContent="Save product"}
 });
 $("refreshProducts").addEventListener("click",refreshAdminProducts);
 
-/* ---------- Inquiries (admin) ---------- */
+/* ---------- Inquiries (admin): board New / In progress / Completed ---------- */
 async function refreshInquiries(){
 if(!db||!isAdmin)return;
-const {data,error}=await db.from("inquiries").select("*").order("created_at",{ascending:false}).limit(100);
-if(error){$("adminInquiries").innerHTML=`<tr><td colspan="6">${esc(error.message)}</td></tr>`;return}
+const {data,error}=await db.from("inquiries").select("*").order("created_at",{ascending:false}).limit(300);
+if(error){toast("Could not load inquiries: "+error.message,true);return}
 AI=data||[];renderAdminInquiries();renderDash();
 }
-function renderAdminInquiries(){
-const q=$("aiq").value.trim().toLowerCase(),s=$("ais").value;
-const rows=AI.filter(i=>(!s||i.status===s)&&(!q||`${i.customer_name} ${i.phone} ${i.product_name} ${i.message}`.toLowerCase().includes(q)));
-$("iCount").textContent=`(${rows.length} of ${AI.length})`;
-$("adminInquiries").innerHTML=rows.map(i=>{
+async function setInqStatus(id,to){
+const {error}=await db.from("inquiries").update({status:to}).eq("id",id);
+if(error){toast("Status update failed: "+error.message,true);return false}
+const r=AI.find(x=>String(x.id)===String(id));if(r)r.status=to;
+renderAdminInquiries();renderDash();return true;
+}
+function inqCard(i){
+const st=normStatus(i);
+const id=esc(i.id);
+const hasFile=i.prescription_file_path&&i.prescription_file_path!=="none";
+const rx=i.prescription_details||"";
+const isOpt=/optical/i.test(i.inquiry_type||"");
 const reply=`https://wa.me/${normPhone(i.phone)}?text=${encodeURIComponent("Assalam o Alaikum "+(i.customer_name||"")+", "+SHOP+" se baat kar rahe hain, aapki inquiry ke bare mein.")}`;
-return `<tr>
-<td>${esc(fmtDate(i.created_at))}</td>
-<td>${esc(i.inquiry_type)}</td>
-<td><b>${esc(i.customer_name)}</b><br>${esc(i.phone)}<br><a class="btn sm g" style="margin-top:6px" href="${esc(reply)}" target="_blank" rel="noopener">Reply</a></td>
-<td><b>${esc(i.product_name)}</b>${i.quantity>1?" x "+esc(i.quantity):""}<br><small>${esc(i.selected_option||"")}</small><br><small>${esc(i.message||"").replace(/\n/g,"<br>")}</small></td>
-<td>${i.prescription_file_path&&i.prescription_file_path!=="none"?`<button class="btn sm" data-file-view="${esc(i.prescription_file_path)}">View file</button>`:"—"}</td>
-<td><select data-status="${esc(i.id)}">${["new","contacted","completed"].map(x=>`<option value="${x}" ${i.status===x?"selected":""}>${x}</option>`).join("")}</select></td>
-</tr>`}).join("")||'<tr><td colspan="6">No inquiries found.</td></tr>';
+const opt=(i.selected_option&&i.selected_option!=="Not specified"&&i.selected_option!==rx)?" · "+esc(i.selected_option):"";
+const mv=(to,label,cls="")=>`<button class="btn sm ${cls}" data-move="${id}" data-to="${to}">${label}</button>`;
+const wa=(label)=>`<a class="btn sm g" data-reply="${id}" href="${esc(reply)}" target="_blank" rel="noopener">${label}</a>`;
+const btns=st==="new"?wa("Reply & start")+mv("completed","Mark completed")
+:st==="contacted"?wa("WhatsApp")+mv("completed","Mark completed")+mv("new","Back to new","o")
+:mv("contacted","Reopen","o");
+return `<div class="iq">
+<div class="meta"><span>${esc(fmtDate(i.created_at))}</span><span class="tag ${isOpt?"on":"off"}">${esc(i.inquiry_type||"")}</span></div>
+<b>${esc(i.customer_name)}</b>
+<span>📞 ${esc(i.phone)}</span>
+<span><b>${esc(i.product_name)}</b>${i.quantity>1?" x "+esc(i.quantity):""}${opt}</span>
+${i.message?`<small>${esc(i.message).replace(/\n/g,"<br>")}</small>`:""}
+${(rx||hasFile)?`<div class="rx">👁️ <b>Prescription</b>${rx?"<br>"+esc(rx).replace(/\n/g,"<br>"):""}${hasFile?`<br><button class="btn sm" style="margin-top:6px" data-file-view="${esc(i.prescription_file_path)}">View file</button>`:""}</div>`:""}
+<div class="acts2">${btns}</div>
+</div>`;
+}
+function renderAdminInquiries(){
+const q=$("aiq").value.trim().toLowerCase(),t=$("ais").value;
+const rows=AI.filter(i=>(!t||i.inquiry_type===t)&&(!q||`${i.customer_name} ${i.phone} ${i.product_name} ${i.message} ${i.prescription_details}`.toLowerCase().includes(q)));
+$("iCount").textContent=`(${rows.length} of ${AI.length})`;
+[["new","colNew","cNew"],["contacted","colProg","cProg"],["completed","colDone","cDone"]].forEach(([s,col,cnt])=>{
+const list=rows.filter(i=>normStatus(i)===s);
+$(cnt).textContent=list.length;
+$(col).innerHTML=list.map(inqCard).join("")||'<p class="note">Nothing here.</p>';
+});
 $$("[data-file-view]").forEach(b=>b.addEventListener("click",()=>viewPrescription(b.dataset.fileView)));
-$$("[data-status]").forEach(s=>s.addEventListener("change",async()=>{
-const {error}=await db.from("inquiries").update({status:s.value}).eq("id",s.dataset.status);
-if(error){toast("Status update failed: "+error.message,true);return}
-const r=AI.find(x=>String(x.id)===s.dataset.status);if(r)r.status=s.value;renderDash();toast("Status updated");
+$$("[data-move]").forEach(b=>b.addEventListener("click",()=>setInqStatus(b.dataset.move,b.dataset.to)));
+/* Reply on a new inquiry moves it to "In progress" automatically */
+$$("[data-reply]").forEach(a=>a.addEventListener("click",()=>{
+const r=AI.find(x=>String(x.id)===a.dataset.reply);
+if(r&&normStatus(r)==="new")setTimeout(()=>setInqStatus(r.id,"contacted"),300);
 }));
 }
 ["aiq","ais"].forEach(id=>$(id).addEventListener("input",renderAdminInquiries));
 async function viewPrescription(path){
-const {data,error}=await db.storage.from("prescriptions").createSignedUrl(path,300);
+const {data,error}=await db.storage.from("prescriptions").createSignedUrl(path,600);
 if(error){toast("Could not open prescription: "+error.message,true);return}
-window.open(data.signedUrl,"_blank");
+const url=data.signedUrl,isPdf=/\.pdf$/i.test(path);
+$("rxBody").innerHTML=isPdf?'<p class="note">PDF file - use the button below to open it.</p>':`<img class="rx-img" src="${esc(url)}" alt="Prescription">`;
+$("rxOpen").href=url;$("rxModal").classList.add("open");
 }
+$("closeRx").addEventListener("click",()=>$("rxModal").classList.remove("open"));
 $("refreshInquiries").addEventListener("click",refreshInquiries);
 
 /* ---------- Website content editor (admin) ---------- */
 const GROUPS=[
-["brand","Logo / brand name"],["hero","Top banner (hero)"],["shop","Shop info: WhatsApp, address, hours"],
+["brand","Logo / brand name"],["hero","Top banner (hero)"],["shop","Shop info: WhatsApp, address, hours"],["social","Social media links (Facebook, Instagram, LinkedIn, YouTube, TikTok)"],
 ["cat","Categories heading"],["catname","Category names"],["catdesc","Category descriptions"],["catimg","Category images"],
 ["prod","Products heading"],["opt","Opticals section"],["why","Why Usmania"],["how","How to order"],
 ["faq","FAQ"],["ct","Contact section"],["foot","Footer"]
@@ -1060,7 +1178,7 @@ $("contentEditor").innerHTML=order.filter(g=>groups[g]).map((g,idx)=>{
 const title=(GROUPS.find(x=>x[0]===g)||[g,g])[1];
 return `<details class="grp" ${idx<3?"open":""}><summary>${esc(title)}</summary><div class="agrid">`+groups[g].map(k=>IMG.has(k)
 ?`<div class="cf"><label>${esc(k)}<img src="${esc(val(k))}" alt=""><input data-url="${esc(k)}" value="${esc(val(k))}" placeholder="Image URL"><input type="file" accept="image/*" data-file="${esc(k)}"></label></div>`
-:`<label>${esc(k)}<textarea data-txt="${esc(k)}" rows="${val(k).length>70?4:2}">${esc(val(k))}</textarea></label>`
+:`<label>${esc(k)}<textarea data-txt="${esc(k)}" rows="${val(k).length>70?4:2}" placeholder="${k.startsWith("social_")?"https://www.facebook.com/yourpage":""}">${esc(val(k))}</textarea></label>`
 ).join("")+"</div></details>";
 }).join("");
 }
